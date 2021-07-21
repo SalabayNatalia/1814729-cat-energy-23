@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Наталья Салабай](https://up.htmlacademy.ru/adaptive/23/user/1814729).
-* Наставник: `Неизвестно`.
+* Наставник: `Олег Цыганов`(https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
