@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body body">
-    <header class="body__page-header page-header">
+  <body class="page__body">
+    <header class="page-header">
       <a class="page-header__logo-picture">
         <img class="page-header__logo-image-picture" src="img/logo-picture-mini.svg" width="33" height="38" alt="мордочка рыжего кота">
       </a>
@@ -17,13 +17,15 @@
           <span class="visually-hidden">Открыть</span>
         </button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item--active">главная</li>
-          <li class="main-navigation__item">каталог продукции</li>
+          <li class="main-navigation__item main-navigation__item--active">главная</li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link-catalog" href="catalog.html">каталог продукции</a>
+          </li>
           <li class="main-navigation__item">подбор программы</li>
         </ul>
       </nav>
     </header>
-    <main class="body__page-main page-main">
+    <main class="page-main">
       <section class="page-main__hero hero">
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__slogan">занялся собой? займись котом!</p>
@@ -88,7 +90,7 @@
         <p class="contacts__adress">ул. Большая<br>Конюшенная, д. 19/B<br>Санкт-Петербург</p>
       </section>
     </main>
-    <footer class="body__page-footer page-footer">
+    <footer class="page-footer">
       <a class="page-footer__logo-text">
         <img class="page-footer__logo-image-text" src="img/logo-text.svg" width="128" height="24" alt="cat energy">
       </a>
