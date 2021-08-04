@@ -1,0 +1,51 @@
+.additional-products {
+  outline: 3px solid $grey;
+}
+
+.additional-products__title {
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.additional-products__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-text;
+}
+
+.additional-products__list {
+  @include clear-list;
+}
+
+.additional-products__item {
+  border-bottom: 1px solid $border-grey-dark;
+  padding-bottom: 19px;
+}
+
+.additional-products__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.additional-products__name {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: $dark-grey;
+}
+
+.additional-products__weight,
+.additional-products__price {
+  font-size: 14px;
+  line-height: 14px;
+  color: $grey-text;
+}
+
+.additional-products__button-order {
+  @include button-style;
+}

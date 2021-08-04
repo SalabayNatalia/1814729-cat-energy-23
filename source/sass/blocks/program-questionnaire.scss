@@ -1,0 +1,75 @@
+.program-questionnaire__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.program-questionnaire__list {
+  @include clear-list;
+}
+
+.program-questionnaire__label-questionnaire {
+  color: $grey-text;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.program-questionnaire__input:focus {
+  border: 2px solid $grey-text;
+}
+
+.program-questionnaire__input:invalid {
+  border: 2px solid $pink;
+}
+
+.program-questionnaire__input--email {
+  position: relative;
+}
+
+.program-questionnaire__input--email::after {
+  content: "";
+  width: 18px;
+  height: 13px;
+  position: absolute;
+  background-image: url("../img/icon-email.svg");
+}
+
+.program-questionnaire__radio {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.program-questionnaire__legend {
+  @include program-questionnaire-legend;
+}
+
+.program-questionnaire__comment {
+  resize: none;
+}
+
+.program-questionnaire__checkbox {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.program-questionnaire__button {
+  @include button-style;
+}
+
+.program-questionnaire__button:hover,
+.program-questionnaire__button:focus {
+  background-color: $button-green;
+}
+
+.program-questionnaire__button:active {
+  background-color: $button-green;
+  color: $button-active;
+}
+
+.program-questionnaire__important {
+  line-height: 16px;
+}

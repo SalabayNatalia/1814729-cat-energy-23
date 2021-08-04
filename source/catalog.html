@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page__body container">
   <header class="page-header">
     <a class="page-header__logo-picture" href="index.html">
       <img class="page-header__logo-image-picture" src="img/logo-picture-mini.svg" width="33" height="38"
@@ -20,8 +21,12 @@
         <span class="visually-hidden">Открыть</span>
       </button>
       <ul class="main-navigation__list">
-        <li class="main-navigation__item">главная</li>
-        <li class="main-navigation__item main-navigation__item--active">каталог продукции</li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">главная</a>
+        </li>
+        <li class="main-navigation__item main-navigation__item--active">
+          <a class="main-navigation__link" href="#">каталог продукции</a>
+        </li>
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="form.html">подбор программы</a>
         </li>
@@ -43,13 +48,13 @@
           </a>
           <dl class="products__informations">
             <dt class="products__term">Масса</dt>
-            <dd class="prducts__description">500 г</dd>
+            <dd class="products__description">500 г</dd>
             <dt class="products__term">Вкус</dt>
-            <dd class="prducts__description">Курица</dd>
+            <dd class="products__description">Курица</dd>
             <dt class="products__term">Цена</dt>
-            <dd class="prducts__description">700 Р.</dd>
+            <dd class="products__description">700 Р.</dd>
           </dl>
-          <a class="products-order" href="form.html">Заказать</a>
+          <a class="products__order" href="form.html">Заказать</a>
         </li>
         <li class="products__item">
           <a class="products__link-name" href="#">
@@ -173,6 +178,7 @@
     </section>
     <section class="page-main-catalog__additional-products additional-products">
       <h2 class="additional-products__title">Дополнительные товары</h2>
+      <p class="additional-products__text">На самом деле вкусов гораздо больше!</p>
       <ul class="additional-products__list">
         <li class="additional-products__item">
           <h3 class="additional-products__name">Сахарозаменитель</h3>
@@ -203,7 +209,7 @@
     <section class="page-main-catalog__promo promo">
       <h2 class="visually-hidden">Промо-акция</h2>
       <img class="promo__icon" src="img/icon-promo.svg" width="78" height="80" alt="контур подарка с бантом">
-      <p class="promo__text">Закажите все и получите чехол для кота в подарок!</p>
+      <p class="promo__text">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
     </section>
     <section class="page-main-catalog__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
@@ -212,33 +218,37 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo-text" href="index.html">
+    <a class="page-footer__logo-text">
       <img class="page-footer__logo-image-text" src="img/logo-text.svg" width="128" height="24" alt="cat energy">
     </a>
     <section class="page-footer__footer-social footer-social">
-      <h2 class="visually-hidden">Социальные сети</h2>
+      <h3 class="visually-hidden">социальные сети</h3>
       <ul class="footer-social__list">
         <li class="footer-social__item">
           <a class="footer-social__link" href="#">
+            <img class="footer-social__icon" src="img/icon-vkontakte.svg" width="23" height="16" alt="вконтакте">
             <span class="visually-hidden">вконтакте</span>
           </a>
         </li>
         <li class="footer-social__item">
           <a class="footer-social__link" href="#">
+            <img class="footer-social__icon" src="img/icon-instagram.svg" width="16" height="16" alt="инстаграм">
             <span class="visually-hidden">instagram</span>
           </a>
         </li>
         <li class="footer-social__item">
           <a class="footer-social__link" href="#">
+            <img class="footer-social__icon" src="img/icon-facebook.svg" width="22" height="22" alt="фейсбук">
             <span class="visually-hidden">facebook</span>
           </a>
         </li>
       </ul>
     </section>
     <section class="page-footer__copyright copyright">
-      <h2 class="visually-hidden">Авторское право</h2>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <img class="copyright-logo" src="img/Лого-html.svg" width="27" height="34" alt="конфедератка">
+      <h3 class="visually-hidden">авторское право</h3>
+      <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link-logo">
+        <img class="copyright__logo" src="img/Лого-html.png" width="27" height="34" alt="конфедератка">
       </a>
     </section>
   </footer>

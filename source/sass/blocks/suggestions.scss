@@ -1,0 +1,48 @@
+.suggestions {
+  outline: 3px solid $pink;
+  outline-offset: -3px;
+}
+
+.suggestions__list {
+  @include clear-list;
+}
+
+.suggestions__item {
+  background-color: $grey;
+}
+
+.suggestions__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.suggestions__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.suggestions__text {
+  color: $grey-text;
+}
+
+.suggestions__link {
+  color: $black;
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+}
+
+.suggestions__link::after {
+  content: "";
+  width: 32px;
+  height: 10px;
+  position: absolute;
+  background-image: url("../img/row.svg");
+}
+
+.suggestions__link:active {
+  opacity: 0.3;
+}

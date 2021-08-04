@@ -1,0 +1,16 @@
+.copyright {
+  outline: 3px solid $pink;
+  outline-offset: -3px;
+}
+
+.copyright__link-text {
+  color: $grey-text;
+}
+
+.copyright__link-logo:active {
+  opacity: 0.3;
+}
+
+.copyright__link-text:active {
+  opacity: 0.3;
+}
