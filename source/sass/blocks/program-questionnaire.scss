@@ -8,6 +8,14 @@
   @include clear-list;
 }
 
+.program-questionnaire__list-radio {
+  @include clear-list;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  padding: 26px 0;
+  margin: 25px 0;
+}
+
 .program-questionnaire__label-questionnaire {
   color: $grey-text;
   text-transform: uppercase;
@@ -34,19 +42,77 @@
   background-image: url("../img/icon-email.svg");
 }
 
-.program-questionnaire__radio {
+.program-questionnaire__item-radio {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.program-questionnaire__radio-name {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $dark-grey;
+  padding-left: 46px;
+}
+
+.program-questionnaire__input-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.program-questionnaire__radio {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  box-shadow: 0 0 0 1px $border-grey-dark;
+  border-radius: 50%;
+  margin-left: -46px;
+  margin-top: -5px;
+}
+
+.program-questionnaire__radio:hover,
+.program-questionnaire__radio:focus {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-radio:checked + .program-questionnaire__radio {
+  background-image: url("../img/radio-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.program-questionnaire__input-radio:checked:hover + .program-questionnaire__radio {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-radio:hover + .program-questionnaire__radio {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-radio:checked:disabled + .program-questionnaire__radio {
+  opacity: 0.3;
+}
+
+.program-questionnaire__input-radio:disabled + .program-questionnaire__radio {
+  opacity: 0.3;
 }
 
 .program-questionnaire__legend {
   @include program-questionnaire-legend;
+  margin-bottom: 39px;
+  padding-top: 20px;
 }
 
 .program-questionnaire__comment {
   resize: none;
+}
+
+.program-questionnaire__item-check {
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .program-questionnaire__checkbox {
@@ -54,10 +120,55 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $black;
+  padding-left: 46px;
+}
+
+.program-questionnaire__input-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.program-questionnaire__check-box {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  box-shadow: 0 0 0 1px $border-grey-dark;
+  margin-left: -46px;
+  margin-top: -5px;
+}
+
+.program-questionnaire__check-box:hover,
+.program-questionnaire__check-box:focus {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-check:checked + .program-questionnaire__check-box {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.program-questionnaire__input-check:checked:hover + .program-questionnaire__check-box {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-check:hover + .program-questionnaire__check-box {
+  box-shadow: 0 0 0 1px $grey-style;
+}
+
+.program-questionnaire__input-check:checked:disabled + .program-questionnaire__check-box {
+  opacity: 0.3;
+}
+
+.program-questionnaire__input-check:disabled + .program-questionnaire__check-box {
+  opacity: 0.3;
 }
 
 .program-questionnaire__button {
-  @include button-style;
+  @include button-green-style;
 }
 
 .program-questionnaire__button:hover,

@@ -14,11 +14,7 @@
   text-transform: uppercase;
   text-align: center;
   border-top: 1px solid $border-grey;
-  padding-top: 24px;
-}
-
-.main-navigation__item:not(:last-child) {
-  margin-bottom: 24px;
+  padding: 20px 0;
 }
 
 .main-navigation__item--active {

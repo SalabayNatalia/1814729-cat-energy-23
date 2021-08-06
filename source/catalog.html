@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body container">
-  <header class="page-header">
+<body class="page__body">
+  <header class="page-header container">
     <a class="page-header__logo-picture" href="index.html">
       <img class="page-header__logo-image-picture" src="img/logo-picture-mini.svg" width="33" height="38"
         alt="мордочка рыжего кота">
@@ -34,8 +34,8 @@
     </nav>
   </header>
   <main class="page-main-catalog">
-    <h1 class="page-main-catalog__title-catalog">Каталог продукции</h1>
-    <section class="page-main-catalog__main-catalog main-catalog">
+    <h1 class="page-main-catalog__title-catalog container">Каталог продукции</h1>
+    <section class="page-main-catalog__main-catalog main-catalog container">
       <h2 class="visually-hidden">Основные продукты</h2>
       <ul class="main-catalog__list products">
         <li class="products__item">
@@ -176,7 +176,7 @@
         </li>
       </ul>
     </section>
-    <section class="page-main-catalog__additional-products additional-products">
+    <section class="page-main-catalog__additional-products additional-products container">
       <h2 class="additional-products__title">Дополнительные товары</h2>
       <p class="additional-products__text">На самом деле вкусов гораздо больше!</p>
       <ul class="additional-products__list">
@@ -206,22 +206,25 @@
         </li>
       </ul>
     </section>
-    <section class="page-main-catalog__promo promo">
+    <section class="page-main-catalog__promo promo container">
       <h2 class="visually-hidden">Промо-акция</h2>
       <img class="promo__icon" src="img/icon-promo.svg" width="78" height="80" alt="контур подарка с бантом">
       <p class="promo__text">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
     </section>
-    <section class="page-main-catalog__contacts contacts">
+    <section class="page-main-catalog__contacts contacts container">
       <h2 class="visually-hidden">Контакты</h2>
       <p class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</p>
       <p class="contacts__adress">ул. Большая<br>Конюшенная, д. 19/B<br>Санкт-Петербург</p>
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo-text">
-      <img class="page-footer__logo-image-text" src="img/logo-text.svg" width="128" height="24" alt="cat energy">
-    </a>
-    <section class="page-footer__footer-social footer-social">
+    <section class="page-footer__logo container">
+      <h4 class="visually-hidden">Логотип</h4>
+      <a class="page-footer__logo-text">
+        <img class="page-footer__logo-image-text container" src="img/logo-text.svg" width="128" height="24" alt="cat energy">
+      </a>
+    </section>
+    <section class="page-footer__footer-social footer-social container">
       <h3 class="visually-hidden">социальные сети</h3>
       <ul class="footer-social__list">
         <li class="footer-social__item">
@@ -244,7 +247,7 @@
         </li>
       </ul>
     </section>
-    <section class="page-footer__copyright copyright">
+    <section class="page-footer__copyright copyright container">
       <h3 class="visually-hidden">авторское право</h3>
       <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="copyright__link-logo">
