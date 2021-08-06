@@ -1,0 +1,37 @@
+.live-example {
+  outline: 3px solid $black;
+  outline-offset: -3px;
+  background-color: $light-grey;
+}
+
+.live-example__title {
+  @include h2-style;
+  margin-bottom: 33px;
+}
+
+.live-example__text {
+  color: $grey-text;
+}
+
+.live-example__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.live-example__description {
+  font-size: 12px;
+  line-height: 12px;
+  color: $grey-text;
+}
+
+.live-example__expenses {
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.live-example__button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

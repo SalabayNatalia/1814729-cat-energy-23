@@ -1,0 +1,50 @@
+.products {
+  outline: 3px solid $black;
+  outline-offset: -3px;
+}
+
+.products__item {
+  border-bottom: 1px solid $grey-border-catalog;
+  padding-bottom: 19px;
+}
+
+.products__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.products__name {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.products__term,
+.products__description {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-text;
+}
+
+.products__order {
+  @include button-green-style;
+}
+
+.products__title-products-offer {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.products__button-show-all {
+  background-color: $grey-grey;
+  color: $grey-text;
+  text-transform: uppercase;
+}

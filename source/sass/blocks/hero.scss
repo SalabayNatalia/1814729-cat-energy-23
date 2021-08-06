@@ -1,0 +1,36 @@
+.hero {
+  outline: 3px solid $grey-grey;
+  outline-offset: -3px;
+  background-color: $green;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $white;
+}
+
+.hero__slogan {
+  color: $white;
+  line-height: 14px;
+  text-align: center;
+}
+
+.hero__image {
+  text-align: center;
+}
+
+.hero__button {
+  @include button-green-style;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: $button-green;
+}
+
+.hero__button:active {
+  background-color: $button-green;
+  color: $button-active;
+}

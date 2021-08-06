@@ -1,0 +1,19 @@
+.page-header {
+  outline: 3px solid $pink;
+  outline-offset: -3px;
+  background-color: $white;
+  margin-bottom: 27px;
+  margin-top: 11px;
+}
+
+.page-header__logo-picture:hover,
+.page-header__logo-text:hover,
+.page-header__logo-picture:focus,
+.page-header__logo-text:focus {
+  opacity: 0.8;
+}
+
+.page-header__logo-picture:active,
+.page-header__logo-text:active {
+  opacity: 0.6;
+}

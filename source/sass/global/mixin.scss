@@ -1,0 +1,39 @@
+@mixin clear-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-green-style {
+  font: inherit;
+  background-color: $green;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  vertical-align: middle;
+}
+
+@mixin h2-style {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+@mixin how-it-works-before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: $green;
+  background-repeat: no-repeat;
+}
+
+@mixin program-questionnaire-legend {
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+}

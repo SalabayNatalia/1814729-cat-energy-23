@@ -1,0 +1,19 @@
+.footer-social {
+  outline: 3px solid $green;
+  outline-offset: -3px;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+}
+
+.footer-social__list {
+  @include clear-list;
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus {
+  opacity: 0.6;
+}
+
+.footer-social__link:active {
+  opacity: 0.3;
+}

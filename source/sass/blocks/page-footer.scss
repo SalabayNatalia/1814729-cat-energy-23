@@ -1,0 +1,15 @@
+.page-footer {
+  outline: 3px solid $pink;
+  outline-offset: -3px;
+  background-color: $grey-grey;
+  margin-bottom: 22px;
+}
+
+.page-footer__logo-text:hover,
+.page-footer__logo-text:focus {
+  opacity: 0.8;
+}
+
+.page-footer__logo-text:active {
+  opacity: 0.6;
+}
