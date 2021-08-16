@@ -1,9 +1,17 @@
 .copyright {
   outline: 3px solid $pink;
   outline-offset: -3px;
+  font-family: "Arial", sans-serif;
+}
+
+.copyright__layout {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
 }
 
 .copyright__link-text {
+  outline: 3px solid $pink;
   color: $grey-text;
 }
 
@@ -13,4 +21,10 @@
 
 .copyright__link-text:active {
   opacity: 0.3;
+}
+
+@media (min-width: $tablet-size) {
+  .copyright__layout {
+    width: 163px;
+  }
 }

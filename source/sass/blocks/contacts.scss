@@ -1,7 +1,12 @@
 .contacts {
   outline: 3px solid $green;
   outline-offset: -3px;
-  // padding-right: 20px;
+}
+
+.contacts__layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 0;
 }
 
 .contacts__title {
@@ -13,4 +18,16 @@
 .contacts__adress {
   line-height: 20px;
   color: $grey-text;
+}
+
+@media (min-width: $tablet-size) {
+  .contacts__title {
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .contacts__adress {
+    font-size: 16px;
+    text-align: end;
+  }
 }

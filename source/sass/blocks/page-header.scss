@@ -1,9 +1,24 @@
 .page-header {
-  outline: 3px solid $pink;
+  // outline: 3px solid $pink;
   outline-offset: -3px;
   background-color: $white;
-  margin-bottom: 27px;
+  margin-bottom: 17px;
   margin-top: 11px;
+}
+
+.page-header__layout {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: min-content 1fr;
+  align-items: center;
+}
+
+.page-header__main-navigation {
+  grid-column: 1 / -1;
+}
+
+.page-header__logo-text {
+  justify-self: center;
 }
 
 .page-header__logo-picture:hover,
@@ -16,4 +31,94 @@
 .page-header__logo-picture:active,
 .page-header__logo-text:active {
   opacity: 0.6;
+}
+
+.page-header__toggle--open {
+  position: relative;
+  align-self: center;
+  justify-self: end;
+  width: 24px;
+  height: 1.5px;
+  background-color: $black;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: $black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: $black;
+  }
+}
+
+.page-header__toggle--closed {
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 51px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -12px;
+    width: 26px;
+    height: 1.5px;
+    background-color: $black;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -13px;
+    width: 26px;
+    height: 1.5px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .page-header {
+    margin-bottom: 62px;
+  }
+
+  .page-header__toggle--closed {
+    display: none;
+  }
+
+  .page-header__layout {
+    display: flex;
+  }
+
+  .page-header__logo-image-text {
+    margin-right: 95px;
+    margin-left: 13px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .page-header {
+    background-color: transparent;
+    margin-bottom: 20px;
+  }
+
+  .page-header__toggle--closed {
+    display: none;
+  }
 }

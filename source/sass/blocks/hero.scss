@@ -1,7 +1,15 @@
 .hero {
   outline: 3px solid $grey-grey;
   outline-offset: -3px;
-  background-color: $green;
+  background-image: url("../img/background-cat.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.hero__layout {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr min-content;
+  justify-items: center;
 }
 
 .hero__title {
@@ -9,12 +17,16 @@
   line-height: 36px;
   text-align: center;
   color: $white;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  font-weight: 400;
 }
 
 .hero__slogan {
   color: $white;
   line-height: 14px;
   text-align: center;
+  margin-bottom: 29px;
 }
 
 .hero__image {
@@ -23,6 +35,9 @@
 
 .hero__button {
   @include button-green-style;
+  width: 100%;
+  padding: 7px 0;
+  margin-bottom: 22px;
 }
 
 .hero__button:hover,
@@ -33,4 +48,53 @@
 .hero__button:active {
   background-color: $button-green;
   color: $button-active;
+}
+
+@media (min-width: $tablet-size) {
+  .hero {
+    background-image: url("../img/background-tablet.png");
+    background-position: bottom;
+  }
+
+  .hero__layout {
+    margin-left: 91px;
+    justify-items: start;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: $black;
+    text-align: start;
+  }
+
+  .hero__slogan {
+    color: $black;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__button {
+    margin-bottom: 540px;
+    padding: 14px 26px;
+    width: 244px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .hero {
+    background-image: url("../img/hero-desktop.png");
+    background-position: top right 330px;
+    padding-bottom: 300px;
+    margin-bottom: 80px;
+  }
+
+  .hero__button {
+    margin-bottom: 0;
+  }
 }

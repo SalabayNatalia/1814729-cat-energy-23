@@ -30,6 +30,18 @@
   height: 60px;
   background-color: $green;
   background-repeat: no-repeat;
+  margin-left: -80px;
+}
+
+@mixin how-it-works-before-tablet {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: $green;
+  background-repeat: no-repeat;
+  top: -107px;
+  left: 82px;
 }
 
 @mixin program-questionnaire-legend {

@@ -3,17 +3,35 @@
   outline-offset: -3px;
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
+  padding: 21px 0;
+  margin-bottom: 28px;
 }
 
 .footer-social__list {
   @include clear-list;
-}
-
-.footer-social__link:hover,
-.footer-social__link:focus {
-  opacity: 0.6;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .footer-social__link:active {
   opacity: 0.3;
+}
+
+@media (min-width: $tablet-size) {
+  .footer-social {
+    margin-bottom: 0;
+  }
+
+  .footer-social__layout {
+    padding: 0;
+  }
+
+  .footer-social__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 129px;
+  }
 }
