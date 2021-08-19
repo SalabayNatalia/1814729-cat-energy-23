@@ -60,19 +60,24 @@
   .how-it-works__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 183px;
+    margin-bottom: 0;
   }
 
   .how-it-works__list {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-row-gap: 245px;
+  }
+
+  .how-it-works__item {
+    padding-top: 235px;
+    margin-bottom: 0;
   }
 
   .how-it-works__text {
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
+    padding-right: 109px;
 
     &--benefit::before {
       @include how-it-works-before-tablet;
@@ -105,5 +110,9 @@
   .how-it-works__list {
     display: flex;
     justify-content: space-between;
+  }
+
+  .how-it-works__text {
+    padding-right: 55px;
   }
 }

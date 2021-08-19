@@ -30,7 +30,9 @@
   height: 60px;
   background-color: $green;
   background-repeat: no-repeat;
-  margin-left: -80px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @mixin how-it-works-before-tablet {
@@ -40,8 +42,7 @@
   height: 80px;
   background-color: $green;
   background-repeat: no-repeat;
-  top: -107px;
-  left: 82px;
+  top: -75px;
 }
 
 @mixin program-questionnaire-legend {

@@ -57,7 +57,7 @@
   }
 
   .hero__layout {
-    margin-left: 91px;
+    padding-left: 91px;
     justify-items: start;
   }
 
@@ -67,6 +67,7 @@
     font-weight: 400;
     color: $black;
     text-align: start;
+    padding-right: 185px;
   }
 
   .hero__slogan {
@@ -92,6 +93,10 @@
     background-position: top right 330px;
     padding-bottom: 300px;
     margin-bottom: 80px;
+  }
+
+  .hero__title {
+    padding-right: 560px;
   }
 
   .hero__button {
