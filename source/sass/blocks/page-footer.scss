@@ -3,6 +3,18 @@
   outline-offset: -3px;
   background-color: $grey-grey;
   margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  text-align: center;
+  background-color: $grey-grey;
+}
+
+.page-footer__logo-image-text {
+  margin-top: 39px;
+  margin-bottom: 32px;
 }
 
 .page-footer__logo-text:hover,
@@ -12,4 +24,12 @@
 
 .page-footer__logo-text:active {
   opacity: 0.6;
+}
+
+@media (min-width: $tablet-size) {
+  .page-footer__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

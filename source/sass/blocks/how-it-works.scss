@@ -1,11 +1,11 @@
 .how-it-works {
   outline: 3px solid $pink;
   outline-offset: -3px;
+  margin-bottom: 27px;
 }
 
 .how-it-works__list {
   @include clear-list;
-  list-style: none;
 }
 
 .how-it-works__title {
@@ -23,9 +23,11 @@
 }
 
 .how-it-works__text {
+  font-family: "Arial", sans-serif;
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
+  padding-left: 80px;
 }
 
 .how-it-works__text--benefit::before {
@@ -46,4 +48,71 @@
 .how-it-works__text--result::before {
   @include how-it-works-before;
   background-image: url("../img/how-it-works-result.png");
+}
+
+@media (min-width: $tablet-size) {
+  .how-it-works {
+    border-bottom: 1px solid $border-grey;
+    padding-bottom: 104px;
+    margin-bottom: 45px;
+  }
+
+  .how-it-works__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .how-it-works__item {
+    padding-top: 235px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 0;
+    padding-right: 109px;
+
+    &--benefit::before {
+      @include how-it-works-before-tablet;
+      background-image: url("../img/how-it-works-benefit-tablet.png");
+    }
+
+    &--convenience::before {
+      @include how-it-works-before-tablet;
+      background-image: url("../img/how-it-works-convenience-tablet.png");
+    }
+
+    &--way::before {
+      @include how-it-works-before-tablet;
+      background-image: url("../img/how-it-works-way-tablet.png");
+    }
+
+    &--result::before {
+      @include how-it-works-before-tablet;
+      background-image: url("../img/how-it-works-result-tablet.png");
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .how-it-works {
+    padding-bottom: 0;
+    margin-bottom: 126px;
+  }
+
+  .how-it-works__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .how-it-works__text {
+    padding-right: 55px;
+  }
 }

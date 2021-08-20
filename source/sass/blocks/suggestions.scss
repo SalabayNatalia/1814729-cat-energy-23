@@ -1,46 +1,131 @@
 .suggestions {
   outline: 3px solid $pink;
   outline-offset: -3px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 45px;
+  }
 }
 
 .suggestions__list {
   @include clear-list;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-size) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-size) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    grid-template-rows: none;
+  }
 }
 
 .suggestions__item {
-  background-color: $grey;
+  background-color: $grey-grey;
+  padding: 30px 33px 18px 20px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: min-content 1fr;
+
+  @media (min-width: $tablet-size) {
+    padding: 77px 62px 57px 52px;
+    grid-template-columns: 1fr min-content;
+  }
+
+  @media (min-width: $desktop-size) {
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: min-content 1fr;
+    padding: 41px 51px 59px 42px;
+  }
 }
 
-.suggestions__item:not(:last-child) {
-  margin-bottom: 20px;
+.suggestions__image {
+  grid-column: 1 / 2;
+  margin-right: 15px;
+
+  @media (min-width: $tablet-size) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+
+  @media (min-width: $desktop-size) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
 
 .suggestions__title {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  grid-column: 2 / -1;
+
+  @media (min-width: $tablet-size) {
+    grid-column: 1 / 2;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-size) {
+    grid-column: 2 / -1;
+  }
 }
 
 .suggestions__text {
   color: $grey-text;
+  font-family: "Arial", sans-serif;
+  padding-bottom: 23px;
+  margin-top: 22px;
+  margin-bottom: 19px;
+  border-bottom: 1px solid $grey;
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-size) {
+    grid-column: 1 / 2;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-size) {
+    grid-column: 1 / -1;
+  }
 }
 
 .suggestions__link {
   color: $black;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   position: relative;
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-size) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .suggestions__link::after {
   content: "";
   width: 32px;
   height: 10px;
+  margin-left: 10px;
   position: absolute;
   background-image: url("../img/row.svg");
+
+  @media (min-width: $tablet-size) {
+    margin-left: 25px;
+    top: 10px;
+  }
 }
 
 .suggestions__link:active {
