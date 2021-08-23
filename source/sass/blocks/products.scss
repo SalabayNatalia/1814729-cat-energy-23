@@ -6,10 +6,13 @@
 .products__item {
   border-bottom: 1px solid $grey-border-catalog;
   padding-bottom: 19px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .products__item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 19px;
 }
 
 .products__name {
@@ -20,6 +23,26 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 14px;
+  align-self: start;
+}
+
+.products__link-image {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  align-self: end;
+  justify-self: center;
+}
+
+.products__informations {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.products__info-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .products__term,
@@ -32,6 +55,16 @@
 
 .products__order {
   @include button-green-style;
+  width: 100%;
+  padding: 10px 0;
+  grid-column: 1 / -1;
+  margin-top: 17px;
+}
+
+.products__plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .products__title-products-offer {
@@ -39,12 +72,83 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-top: 0;
+  margin-top: 19px;
   margin-bottom: 0;
+}
+
+.products__text-products-offer {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-text;
 }
 
 .products__button-show-all {
   background-color: $grey-grey;
   color: $grey-text;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  vertical-align: middle;
+  padding: 10px 0;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+@media (min-width: $tablet-size) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 94px;
+  }
+
+  .products__item {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    padding: 0 38px 39px;
+    border-bottom: none;
+    background-image: linear-gradient(to bottom, $white 21%, $grey-grey 21%);
+  }
+
+  .products__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .products__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .products__info-item {
+    padding-bottom: 9px;
+    border-bottom: 1px solid $border-grey-dark;
+    margin-bottom: 7px;
+  }
+
+  .products__term,
+  .products__description {
+    font-size: 16px;
+  }
+
+  .products__plus {
+    justify-content: space-between;
+    padding: 57px 37px 38px 38px;
+    border: 2px solid $grey-grey;
+  }
+
+  .products__button-show-all {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 92px;
+  }
 }

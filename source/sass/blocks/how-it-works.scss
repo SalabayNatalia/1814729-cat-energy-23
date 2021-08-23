@@ -15,7 +15,6 @@
 
 .how-it-works__item {
   color: $grey-text;
-  position: relative;
 }
 
 .how-it-works__item:not(:last-child) {
@@ -53,14 +52,13 @@
 @media (min-width: $tablet-size) {
   .how-it-works {
     border-bottom: 1px solid $border-grey;
-    padding-bottom: 104px;
     margin-bottom: 45px;
   }
 
   .how-it-works__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 0;
+    margin-bottom: 72px;
   }
 
   .how-it-works__list {
@@ -69,8 +67,29 @@
   }
 
   .how-it-works__item {
-    padding-top: 235px;
-    margin-bottom: 0;
+    margin-bottom: 104px;
+  }
+
+  .how-it-works__item--benefit {
+    position: relative;
+  }
+
+  .how-it-works__item:not(:last-child) {
+    margin-bottom: 104px;
+  }
+
+  .how-it-works__item--benefit::after {
+    content: "1";
+    position: absolute;
+    font-size: 280px;
+    line-height: 280px;
+    font-family: "Oswald", "Arial", sans-serif;
+    color: $grey-grey;
+    width: 112px;
+    height: 280px;
+    top: -40px;
+    right: 73px;
+    z-index: -1;
   }
 
   .how-it-works__text {
@@ -78,6 +97,7 @@
     line-height: 24px;
     padding-left: 0;
     padding-right: 109px;
+    padding-top: 110px;
 
     &--benefit::before {
       @include how-it-works-before-tablet;

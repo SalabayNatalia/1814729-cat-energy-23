@@ -1,6 +1,24 @@
+.promo {
+  margin: 0 auto;
+  position: relative;
+}
+
 .promo__text {
   font-size: 16px;
   line-height: 20px;
   color: $white;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo__icon {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
 }
