@@ -1,3 +1,7 @@
+.program-questionnaire {
+  padding-bottom: 32px;
+}
+
 .program-questionnaire__fieldset {
   margin: 0;
   padding: 0;
@@ -25,6 +29,15 @@
   position: relative;
 }
 
+.program-questionnaire__item--phone,
+.program-questionnaire__item--email {
+  margin-top: 0;
+}
+
+.program-questionnaire__item--phone {
+  margin-bottom: 5px;
+}
+
 .program-questionnaire__icon--email,
 .program-questionnaire__icon--phone {
   position: absolute;
@@ -37,35 +50,20 @@
   font-size: 16px;
 }
 
-.program-questionnaire__input:focus {
-  border: 2px solid $grey-text;
-}
-
-.program-questionnaire__input:invalid {
-  border: 2px solid $pink;
-}
-
 .program-questionnaire__input {
   flex-grow: 1;
   margin-left: 12px;
   padding: 14px 0 13px 15px;
   text-transform: uppercase;
+  border: 1px solid $border-grey-dark;
 }
 
 .program-questionnaire__input--email {
   position: relative;
 }
 
-.program-questionnaire__input--email:active + .program-questionnaire__icon--email,
-.program-questionnaire__input--email:focus + .program-questionnaire__icon--email,
-.program-questionnaire__input--phone:active + .program-questionnaire__icon--phone,
-.program-questionnaire__input--phone:focus + .program-questionnaire__icon--phone {
-  fill: $green;
-}
-
-.program-questionnaire__input:invalid + .program-questionnaire__icon--email,
-.program-questionnaire__input:invalid + .program-questionnaire__icon--phone {
-  fill: $pink;
+.program-questionnaire__input:focus {
+  border: 2px solid $grey-text;
 }
 
 .program-questionnaire__item-radio {
@@ -128,16 +126,18 @@
 
 .program-questionnaire__legend {
   @include program-questionnaire-legend;
-  margin-bottom: 39px;
+  margin-bottom: 15px;
   padding: 20px 14px 20px 0;
   position: relative;
+  background-color: $white;
+  max-width: 201px;
 }
 
 .program-questionnaire__legend::after {
   content: "";
   background-color: $green;
   position: absolute;
-  top: 50%;
+  top: 31px;
   width: 100vw;
   height: 2px;
   z-index: -1;
@@ -229,8 +229,36 @@
 
 .program-questionnaire__important {
   font-family: "Arial", sans-serif;
+  font-size: 14px;
   line-height: 16px;
   justify-self: center;
+}
+
+.program-questionnaire__icon--email {
+  stroke: $dark-grey;
+}
+
+.program-questionnaire__icon--phone {
+  fill: $dark-grey;
+}
+
+.program-questionnaire__input:invalid {
+  border: 2px solid $pink;
+}
+
+.program-questionnaire__input:invalid + .program-questionnaire__icon--email,
+.program-questionnaire__input:invalid + .program-questionnaire__icon--phone {
+  stroke: $pink;
+}
+
+.program-questionnaire__input--email:active + .program-questionnaire__icon--email,
+.program-questionnaire__input--email:focus + .program-questionnaire__icon--email {
+  stroke: $green;
+}
+
+.program-questionnaire__input--phone:active + .program-questionnaire__icon--phone,
+.program-questionnaire__input--phone:focus + .program-questionnaire__icon--phone {
+  stroke: $green;
 }
 
 @media (min-width: $tablet-size) {
@@ -238,17 +266,37 @@
     font-size: 36px;
     line-height: 36px;
     padding: 20px 40px;
+    max-width: none;
+  }
+
+  .program-questionnaire__legend::after {
+    top: 37px;
   }
 
   .program-questionnaire__legend::before {
     content: "";
     background-color: $green;
     position: absolute;
-    top: 50%;
+    top: 37px;
     width: 100vw;
     height: 2px;
     z-index: -1;
     margin-top: 2px;
+    right: 0;
+  }
+
+  .program-questionnaire__legend--contact {
+    margin-bottom: 76px;
+    padding-bottom: 0;
+  }
+  .program-questionnaire__legend--comment {
+    margin-bottom: 76px;
+    padding-bottom: 0;
+  }
+
+  .program-questionnaire__legend--additionally {
+    margin-bottom: 54px;
+    padding-bottom: 0;
   }
 
   .program-questionnaire__label-questionnaire {
@@ -258,10 +306,6 @@
 
   .program-questionnaire__item {
     padding: 0 40px;
-  }
-
-  .program-questionnaire__contacts {
-    margin-top: 70px;
   }
 
   .program-questionnaire__icon--email,
@@ -315,9 +359,11 @@
 
 @media (min-width: $desktop-size) {
   .program-questionnaire__legend {
-    font-size: 60px;
-    line-height: 60px;
-    padding: 20px 0;
+    padding: 20px 40px;
+  }
+
+  .program-questionnaire__legend::after {
+    top: 40px;
   }
 
   .program-questionnaire__layout {

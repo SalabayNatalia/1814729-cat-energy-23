@@ -1,7 +1,7 @@
 .page-header {
   background-color: $white;
   padding-bottom: 17px;
-  padding-top: 11px;
+  padding-top: 12px;
 }
 
 .page-header__layout {
@@ -93,7 +93,9 @@
 
 @media (min-width: $tablet-size) {
   .page-header {
-    margin-bottom: 62px;
+    margin-bottom: 67px;
+    padding-top: 27px;
+    padding-bottom: 0;
   }
 
   .page-header__toggle--closed {
@@ -114,6 +116,7 @@
   .page-header {
     background-color: transparent;
     margin-bottom: 20px;
+    padding-top: 54px;
   }
 
   .page-header__toggle--closed {
