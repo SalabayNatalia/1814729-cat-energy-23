@@ -42,7 +42,8 @@
   height: 80px;
   background-color: $green;
   background-repeat: no-repeat;
-  top: -75px;
+  top: 0;
+  transform: none;
 }
 
 @mixin program-questionnaire-legend {

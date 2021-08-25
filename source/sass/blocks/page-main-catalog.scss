@@ -1,8 +1,16 @@
+.page-main-catalog__additional-products {
+  overflow: hidden;
+}
+
 .page-main-catalog__title-catalog {
   font-size: 36px;
   line-height: 36px;
   margin-top: 0;
-  margin-bottom: 41px;
+  margin-bottom: 19px;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  border-top: 1px solid $grey-border-catalog;
+  border-bottom: 1px solid $grey-border-catalog;
   font-weight: 400;
 }
 
@@ -10,6 +18,28 @@
   background-image: url("../img/promo.svg");
   background-repeat: no-repeat;
   background-color: $green;
+  background-position: center;
   width: 280px;
   height: 289px;
+}
+
+@media (min-width: $tablet-size) {
+  .page-main-catalog__title-catalog {
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+    padding-top: 0;
+  }
+
+  .page-main-catalog__promo {
+    width: 707px;
+    height: 200px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .page-main-catalog__promo {
+    width: 245px;
+    height: 289px;
+  }
 }

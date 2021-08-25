@@ -1,3 +1,7 @@
+.program-questionnaire {
+  padding-bottom: 32px;
+}
+
 .program-questionnaire__fieldset {
   margin: 0;
   padding: 0;
@@ -8,12 +12,36 @@
   @include clear-list;
 }
 
-.program-questionnaire__list-radio {
-  @include clear-list;
+.program-questionnaire__fieldset--radio {
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
-  padding: 26px 0;
-  margin: 25px 0;
+  padding: 22px 20px 20px;
+  margin: 0 -20px;
+}
+
+.program-questionnaire__list-radio {
+  @include clear-list;
+}
+
+.program-questionnaire__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.program-questionnaire__item--phone,
+.program-questionnaire__item--email {
+  margin-top: 0;
+}
+
+.program-questionnaire__item--phone {
+  margin-bottom: 5px;
+}
+
+.program-questionnaire__icon--email,
+.program-questionnaire__icon--phone {
+  position: absolute;
+  right: 18px;
 }
 
 .program-questionnaire__label-questionnaire {
@@ -22,24 +50,20 @@
   font-size: 16px;
 }
 
-.program-questionnaire__input:focus {
-  border: 2px solid $grey-text;
-}
-
-.program-questionnaire__input:invalid {
-  border: 2px solid $pink;
+.program-questionnaire__input {
+  flex-grow: 1;
+  margin-left: 12px;
+  padding: 14px 0 13px 15px;
+  text-transform: uppercase;
+  border: 1px solid $border-grey-dark;
 }
 
 .program-questionnaire__input--email {
   position: relative;
 }
 
-.program-questionnaire__input--email::after {
-  content: "";
-  width: 18px;
-  height: 13px;
-  position: absolute;
-  background-image: url("../img/icon-email.svg");
+.program-questionnaire__input:focus {
+  border: 2px solid $grey-text;
 }
 
 .program-questionnaire__item-radio {
@@ -102,12 +126,30 @@
 
 .program-questionnaire__legend {
   @include program-questionnaire-legend;
-  margin-bottom: 39px;
-  padding-top: 20px;
+  margin-bottom: 15px;
+  padding: 20px 14px 20px 0;
+  position: relative;
+  background-color: $white;
+  max-width: 201px;
+}
+
+.program-questionnaire__legend::after {
+  content: "";
+  background-color: $green;
+  position: absolute;
+  top: 31px;
+  width: 100vw;
+  height: 2px;
+  z-index: -1;
+  margin-top: 2px;
 }
 
 .program-questionnaire__comment {
   resize: none;
+  width: 265px;
+  height: 150px;
+  text-transform: uppercase;
+  padding: 9px 0 0 15px;
 }
 
 .program-questionnaire__item-check {
@@ -169,6 +211,10 @@
 
 .program-questionnaire__button {
   @include button-green-style;
+  width: 100%;
+  padding: 7px 0;
+  margin-top: 34px;
+  margin-bottom: 21px;
 }
 
 .program-questionnaire__button:hover,
@@ -182,5 +228,185 @@
 }
 
 .program-questionnaire__important {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
   line-height: 16px;
+  justify-self: center;
+}
+
+.program-questionnaire__icon--email {
+  stroke: $dark-grey;
+}
+
+.program-questionnaire__icon--phone {
+  fill: $dark-grey;
+}
+
+.program-questionnaire__input:invalid {
+  border: 2px solid $pink;
+}
+
+.program-questionnaire__input:invalid + .program-questionnaire__icon--email {
+  stroke: $pink;
+}
+
+.program-questionnaire__input:invalid + .program-questionnaire__icon--phone {
+  fill: $pink;
+}
+
+.program-questionnaire__input--email:active + .program-questionnaire__icon--email,
+.program-questionnaire__input--email:focus + .program-questionnaire__icon--email {
+  stroke: $green;
+}
+
+.program-questionnaire__input--phone:active + .program-questionnaire__icon--phone,
+.program-questionnaire__input--phone:focus + .program-questionnaire__icon--phone {
+  fill: $green;
+}
+
+@media (min-width: $tablet-size) {
+  .program-questionnaire__legend {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 20px 40px;
+    max-width: none;
+  }
+
+  .program-questionnaire__legend::after {
+    top: 37px;
+  }
+
+  .program-questionnaire__legend::before {
+    content: "";
+    background-color: $green;
+    position: absolute;
+    top: 37px;
+    width: 100vw;
+    height: 2px;
+    z-index: -1;
+    margin-top: 2px;
+    right: 0;
+  }
+
+  .program-questionnaire__legend--contact {
+    margin-bottom: 76px;
+    padding-bottom: 0;
+  }
+
+  .program-questionnaire__legend--comment {
+    margin-bottom: 76px;
+    padding-bottom: 0;
+  }
+
+  .program-questionnaire__legend--additionally {
+    margin-bottom: 54px;
+    padding-bottom: 0;
+  }
+
+  .program-questionnaire__label-questionnaire {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-questionnaire__item {
+    padding: 0 40px;
+  }
+
+  .program-questionnaire__icon--email,
+  .program-questionnaire__icon--phone {
+    right: 50px;
+  }
+
+  .program-questionnaire__fieldset--radio {
+    border: none;
+  }
+
+  .program-questionnaire__list-radio {
+    border: 1px solid $border-grey;
+    padding: 25px 0 25px 28px;
+  }
+
+  .program-questionnaire__comment {
+    width: 630px;
+    height: 174px;
+    margin-bottom: 65px;
+  }
+
+  .program-questionnaire__comment--inner {
+    padding: 0 40px;
+  }
+
+  .program-questionnaire__list--check {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+  }
+
+  .program-questionnaire__button {
+    width: 282px;
+    margin-right: 61px;
+    padding: 13px 0;
+  }
+
+  .program-questionnaire__button--inner {
+    padding: 0 40px;
+  }
+
+  .program-questionnaire__important {
+    font-size: 16px;
+  }
+
+  .program-questionnaire__list-radio--inner {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .program-questionnaire__legend {
+    padding: 20px 40px;
+  }
+
+  .program-questionnaire__legend::after {
+    top: 40px;
+  }
+
+  .program-questionnaire__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+  }
+
+  .program-questionnaire__item {
+    padding: 0;
+  }
+
+  .program-questionnaire__input {
+    flex-grow: 1;
+  }
+
+  .program-questionnaire__comment {
+    width: 1220px;
+  }
+
+  .program-questionnaire__comment--inner {
+    padding: 0;
+  }
+
+  .program-questionnaire__list--check {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+  }
+
+  .program-questionnaire__button {
+    width: 568px;
+  }
+
+  .program-questionnaire__button--inner {
+    padding: 0;
+  }
+
+  .program-questionnaire__list-radio--inner {
+    padding: 0;
+  }
 }

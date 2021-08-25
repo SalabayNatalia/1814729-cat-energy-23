@@ -52,12 +52,12 @@
 
 @media (min-width: $tablet-size) {
   .hero {
-    background-image: url("../img/background-tablet.png");
-    background-position: bottom;
+    background-image: none;
   }
 
   .hero__layout {
     padding-left: 91px;
+    padding-bottom: 500px;
     justify-items: start;
   }
 
@@ -76,12 +76,7 @@
     line-height: 20px;
   }
 
-  .hero__image {
-    display: none;
-  }
-
   .hero__button {
-    margin-bottom: 540px;
     padding: 14px 26px;
     width: 244px;
   }
@@ -89,10 +84,22 @@
 
 @media (min-width: $desktop-size) {
   .hero {
-    background-image: url("../img/hero-desktop.png");
-    background-position: top right 330px;
     padding-bottom: 300px;
     margin-bottom: 80px;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    background-image: url("../img/background-desktop.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    top: -130px;
+    right: 0;
+    z-index: -1;
+    width: 720px;
+    height: 694px;
   }
 
   .hero__title {
