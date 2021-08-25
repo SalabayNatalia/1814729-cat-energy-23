@@ -13,7 +13,6 @@
   background-color: $white;
   position: relative;
   max-width: 268px;
-
 }
 
 .additional-products__title::after {
@@ -92,6 +91,7 @@
     margin-bottom: 44px;
     padding-top: 68px;
     max-width: 365px;
+    padding-left: 30px;
   }
 
   .additional-products__title::after {
@@ -149,11 +149,16 @@
   .additional-products__layout {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    align-items: center;
   }
 
   .additional-products__list {
     border-right: none;
     border-left: none;
+    border-bottom: none;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 80px;
   }
 
   .additional-products__item {

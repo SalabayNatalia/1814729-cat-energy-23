@@ -28,3 +28,10 @@
     margin: 69px 0 76px;
   }
 }
+
+@media (min-width: $desktop-size) {
+  .promo {
+    margin: 0;
+    align-self: start;
+  }
+}

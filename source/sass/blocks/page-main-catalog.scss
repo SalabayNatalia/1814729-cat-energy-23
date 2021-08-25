@@ -36,3 +36,10 @@
     height: 200px;
   }
 }
+
+@media (min-width: $desktop-size) {
+  .page-main-catalog__promo {
+    width: 245px;
+    height: 289px;
+  }
+}

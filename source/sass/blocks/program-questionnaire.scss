@@ -246,9 +246,12 @@
   border: 2px solid $pink;
 }
 
-.program-questionnaire__input:invalid + .program-questionnaire__icon--email,
-.program-questionnaire__input:invalid + .program-questionnaire__icon--phone {
+.program-questionnaire__input:invalid + .program-questionnaire__icon--email {
   stroke: $pink;
+}
+
+.program-questionnaire__input:invalid + .program-questionnaire__icon--phone {
+  fill: $pink;
 }
 
 .program-questionnaire__input--email:active + .program-questionnaire__icon--email,
@@ -258,7 +261,7 @@
 
 .program-questionnaire__input--phone:active + .program-questionnaire__icon--phone,
 .program-questionnaire__input--phone:focus + .program-questionnaire__icon--phone {
-  stroke: $green;
+  fill: $green;
 }
 
 @media (min-width: $tablet-size) {
@@ -289,6 +292,7 @@
     margin-bottom: 76px;
     padding-bottom: 0;
   }
+
   .program-questionnaire__legend--comment {
     margin-bottom: 76px;
     padding-bottom: 0;
