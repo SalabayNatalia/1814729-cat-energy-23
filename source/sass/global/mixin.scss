@@ -46,6 +46,16 @@
   transform: none;
 }
 
+@mixin how-it-works-after {
+  position: absolute;
+  font-size: 280px;
+  line-height: 280px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $grey-grey;
+  height: 280px;
+  z-index: -1;
+}
+
 @mixin program-questionnaire-legend {
   font-size: 24px;
   line-height: 26px;

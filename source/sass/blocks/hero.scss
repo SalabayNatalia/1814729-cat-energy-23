@@ -1,6 +1,4 @@
 .hero {
-  outline: 3px solid $grey-grey;
-  outline-offset: -3px;
   background-image: url("../img/background-cat.png");
   background-repeat: no-repeat;
   background-position: top;
@@ -108,5 +106,15 @@
 
   .hero__button {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .hero__layout {
+    padding-bottom: 0;
+  }
+
+  .hero {
+    padding-bottom: 82px;
   }
 }

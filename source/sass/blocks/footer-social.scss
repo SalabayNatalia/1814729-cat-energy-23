@@ -17,9 +17,25 @@
   opacity: 0.3;
 }
 
+// .footer-social__link:hover .footer-social__icon,
+.footer-social__icon:hover {
+  stroke: $green;
+  stroke-width: 1px;
+}
+
+// .social__icon-vk,
+// .social__icon-insta,
+// .social__icon-fb {
+//   &:hover,
+//   &:focus {
+//     stroke: @basic-green;
+//     stroke-width: 1px;
+//   }
+
 @media (min-width: $tablet-size) {
   .footer-social {
     margin-bottom: 0;
+    border: none;
   }
 
   .footer-social__layout {
