@@ -20,6 +20,11 @@
   opacity: 0.3;
 }
 
+.copyright__link-logo:hover,
+.copyright__link-logo:focus {
+  stroke: $green;
+}
+
 @media (min-width: $tablet-size) {
   .copyright__layout {
     width: 163px;

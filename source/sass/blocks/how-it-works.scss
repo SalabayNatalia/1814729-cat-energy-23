@@ -98,7 +98,7 @@
     content: "4";
     width: 136px;
     top: -40px;
-    right: 118px;
+    right: 107px;
   }
 
   .how-it-works__item {
@@ -133,8 +133,8 @@
 
 @media (min-width: $desktop-size) {
   .how-it-works {
-    padding-bottom: 0;
-    margin-bottom: 126px;
+    padding-bottom: 126px;
+    border-bottom: none;
   }
 
   .how-it-works__list {
@@ -143,9 +143,26 @@
 
   .how-it-works__item {
     padding-right: 55px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .how-it-works__item--benefit::after {
-    right: 28px;
+    right: 69px;
+  }
+
+  .how-it-works__item--convenience::after {
+    right: 66px;
+  }
+
+  .how-it-works__item--way::after {
+    right: 55px;
+  }
+
+  .how-it-works__item--result::after {
+    right: 55px;
   }
 }

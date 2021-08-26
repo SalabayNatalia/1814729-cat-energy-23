@@ -13,24 +13,20 @@
   align-items: center;
 }
 
+.footer-social__icon--fb {
+  fill: none;
+  stroke: $social;
+}
+
 .footer-social__link:active {
   opacity: 0.3;
 }
 
-// .footer-social__link:hover .footer-social__icon,
-.footer-social__icon:hover {
+.footer-social__icon:hover,
+.footer-social__icon:focus {
   stroke: $green;
   stroke-width: 1px;
 }
-
-// .social__icon-vk,
-// .social__icon-insta,
-// .social__icon-fb {
-//   &:hover,
-//   &:focus {
-//     stroke: @basic-green;
-//     stroke-width: 1px;
-//   }
 
 @media (min-width: $tablet-size) {
   .footer-social {
