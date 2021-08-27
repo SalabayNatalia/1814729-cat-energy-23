@@ -1,6 +1,4 @@
 .how-it-works {
-  outline: 3px solid $pink;
-  outline-offset: -3px;
   margin-bottom: 27px;
 }
 
@@ -15,13 +13,6 @@
 
 .how-it-works__item {
   color: $grey-text;
-}
-
-.how-it-works__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.how-it-works__text {
   font-family: "Arial", sans-serif;
   margin-bottom: 0;
   margin-top: 0;
@@ -29,22 +20,26 @@
   padding-left: 80px;
 }
 
-.how-it-works__text--benefit::before {
+.how-it-works__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.how-it-works__item--benefit::before {
   @include how-it-works-before;
   background-image: url("../img/how-it-works-benefit.png");
 }
 
-.how-it-works__text--convenience::before {
+.how-it-works__item--convenience::before {
   @include how-it-works-before;
   background-image: url("../img/how-it-works-convenience.png");
 }
 
-.how-it-works__text--way::before {
+.how-it-works__item--way::before {
   @include how-it-works-before;
   background-image: url("../img/how-it-works-way.png");
 }
 
-.how-it-works__text--result::before {
+.how-it-works__item--result::before {
   @include how-it-works-before;
   background-image: url("../img/how-it-works-result.png");
 }
@@ -66,10 +61,6 @@
     grid-template-columns: 50% 50%;
   }
 
-  .how-it-works__item {
-    margin-bottom: 104px;
-  }
-
   .how-it-works__item--benefit {
     position: relative;
   }
@@ -79,25 +70,44 @@
   }
 
   .how-it-works__item--benefit::after {
+    @include how-it-works-after;
     content: "1";
-    position: absolute;
-    font-size: 280px;
-    line-height: 280px;
-    font-family: "Oswald", "Arial", sans-serif;
-    color: $grey-grey;
     width: 112px;
-    height: 280px;
     top: -40px;
-    right: 73px;
-    z-index: -1;
+    right: 118px;
   }
 
-  .how-it-works__text {
+  .how-it-works__item--convenience::after {
+    @include how-it-works-after;
+    content: "2";
+    width: 134px;
+    top: -40px;
+    right: 118px;
+  }
+
+  .how-it-works__item--way::after {
+    @include how-it-works-after;
+    content: "3";
+    width: 134px;
+    top: -40px;
+    right: 118px;
+  }
+
+  .how-it-works__item--result::after {
+    @include how-it-works-after;
+    content: "4";
+    width: 136px;
+    top: -40px;
+    right: 107px;
+  }
+
+  .how-it-works__item {
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
     padding-right: 109px;
     padding-top: 110px;
+    margin-bottom: 104px;
 
     &--benefit::before {
       @include how-it-works-before-tablet;
@@ -123,16 +133,36 @@
 
 @media (min-width: $desktop-size) {
   .how-it-works {
-    padding-bottom: 0;
-    margin-bottom: 126px;
+    padding-bottom: 126px;
+    border-bottom: none;
   }
 
   .how-it-works__list {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .how-it-works__text {
+  .how-it-works__item {
     padding-right: 55px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .how-it-works__item--benefit::after {
+    right: 69px;
+  }
+
+  .how-it-works__item--convenience::after {
+    right: 66px;
+  }
+
+  .how-it-works__item--way::after {
+    right: 55px;
+  }
+
+  .how-it-works__item--result::after {
+    right: 55px;
   }
 }
