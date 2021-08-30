@@ -15,12 +15,17 @@
 }
 
 .page-main-catalog__promo {
-  background-image: url("../img/promo.svg");
+  background-image: url("../img/promo.jpg");
   background-repeat: no-repeat;
   background-color: $green;
   background-position: center;
   width: 280px;
   height: 289px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo@2x.jpg");
+    background-size: 289px 280px;
+  }
 }
 
 @media (min-width: $tablet-size) {
@@ -32,8 +37,13 @@
   }
 
   .page-main-catalog__promo {
+    background-image: url("../img/promo-tablet.jpg");
     width: 707px;
     height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet@2x.jpg");
+    }
   }
 }
 
@@ -41,5 +51,12 @@
   .page-main-catalog__promo {
     width: 245px;
     height: 289px;
+    background-image: url("../img/promo-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 245px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/promo-desktop@2x.jpg");
+    }
   }
 }

@@ -120,8 +120,43 @@
   }
 
   .products__item:not(:last-child) {
-    margin-bottom: 0;
+    margin: 0;
     background-image: linear-gradient(to bottom, $white 21%, $grey-grey 21%);
+  }
+
+  .products__image--chicken-mini {
+    width: 161px;
+    height: 172px;
+  }
+
+  .products__image--chicken-maxi {
+    width: 168px;
+    height: 206px;
+  }
+
+  .products__image--fish-mini {
+    width: 163px;
+    height: 174px;
+  }
+
+  .products__image--fish-maxi {
+    width: 168px;
+    height: 200px;
+  }
+
+  .products__image--buckwheat-mini {
+    width: 161px;
+    height: 171px;
+  }
+
+  .products__image--buckwheat-maxi {
+    width: 168px;
+    height: 200px;
+  }
+
+  .products__image--rice {
+    width: 163px;
+    height: 174px;
   }
 
   .products__name {
@@ -138,6 +173,10 @@
   .products__term,
   .products__description {
     font-size: 16px;
+  }
+
+  .products__order {
+    width: 248px;
   }
 
   .products__title-products-offer {
@@ -184,5 +223,20 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 92px;
+  }
+
+  .products__image--chicken-maxi {
+    width: 172px;
+    height: 202px;
+  }
+
+  .products__image--fish-maxi {
+    width: 172px;
+    height: 196px;
+  }
+
+  .products__image--buckwheat-maxi {
+    width: 172px;
+    height: 196px;
   }
 }
