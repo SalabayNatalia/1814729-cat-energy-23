@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
-
   <body class="page-body-catalog">
     <header class="page-header">
       <div class="container">
         <div class="page-header__layout">
-          <a class="page-header__logo-picture">
-            <picture>
-              <source
+          <a href="index.html" class="page-header__logo-picture"
+            ><picture
+              ><source
                 media="(min-width: 1440px)"
-                srcset="img/logo-desktop.svg"
-              />
+                srcset="img/logo-desktop.svg" />
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
               <img
                 class="page-header__logo"
                 src="img/logo-mobile.svg"
                 height="38"
                 width="195"
-                alt="мордочка рыжего кота"
-              />
-            </picture>
-          </a>
-          <button
+                alt="мордочка рыжего кота" /></picture></a
+          ><button
             class="page-header__toggle page-header__toggle--closed"
             type="button"
           >
@@ -44,14 +43,16 @@
               </li>
               <li
                 class="
-                  main-navigation__item main-navigation__item--active-catalog
+                  main-navigation__item
+                  main-navigation__item--catalog
+                  main-navigation__item--active-catalog
                 "
               >
                 <a class="main-navigation__link main-navigation__link--catalog"
                   >каталог продукции</a
                 >
               </li>
-              <li class="main-navigation__item">
+              <li class="main-navigation__item main-navigation__item--program">
                 <a
                   class="main-navigation__link main-navigation__link--catalog"
                   href="form.html"
@@ -72,35 +73,50 @@
           <h2 class="visually-hidden">Основные продукты</h2>
           <ul class="main-catalog__list products">
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />pro 500 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />pro 500 г</h3></a
+              ><a class="products__link-image" href="#">
                 <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/product-chicken-mini-desktop.webp,
+                      img/product-chicken-mini-desktop@2.webp 2x
+                    " />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/product-chicken-mini-tablet.webp,
+                      img/product-chicken-mini-tablet@2.webp 2x
+                    " />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/product-chicken-mini.webp,
+                      img/product-chicken-mini@2.webp 2x
+                    " />
                   <source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-chicken-mini-desktop.png   1x,
+                      img/product-chicken-mini-desktop.png,
                       img/product-chicken-mini-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-chicken-mini-tablet.png   1x,
+                      img/product-chicken-mini-tablet.png,
                       img/product-chicken-mini-tablet@2.png 2x
-                    "
-                  />
+                    " />
                   <img
                     class="products__image products__image--chicken-mini"
                     src="img/product-chicken-mini.png 1x"
                     srcset="img/product-chicken-mini@2.png 2x"
                     width="68"
                     height="86"
-                    alt="маленький оранжевый стакан"
-                  />
-                </picture>
-              </a>
+                    alt="маленький оранжевый стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -118,34 +134,29 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />pro 1000 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />pro 1000 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-chicken-maxi-desktop.png   1x,
+                      img/product-chicken-maxi-desktop.png,
                       img/product-chicken-maxi-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-chicken-maxi-tablet.png   1x,
+                      img/product-chicken-maxi-tablet.png,
                       img/product-chicken-maxi-tablet@2.png 2x
-                    "
-                  />
+                    " />
                   <img
                     class="products__image products__image--chicken-maxi"
                     src="img/product-chicken-maxi.png"
                     width="84"
                     height="102"
-                    alt="большой оранжевый стакан"
-                  />
-                </picture>
-              </a>
+                    alt="большой оранжевый стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -163,22 +174,21 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />pro 500 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />pro 500 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-fish-mini-desktop.png   1x,
+                      img/product-fish-mini-desktop.png,
                       img/product-fish-mini-desktop@2.png 2x
                     "
                   />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-fish-mini-tablet.png   1x,
+                      img/product-fish-mini-tablet.png,
                       img/product-fish-mini-tablet@2.png 2x
                     "
                   />
@@ -189,9 +199,8 @@
                     width="68"
                     height="78"
                     alt="маленький зелёный стакан"
-                  />
-                </picture>
-              </a>
+                  /> </picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -209,35 +218,30 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />pro 1000 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />pro 1000 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-fish-maxi-desktop.png   1x,
+                      img/product-fish-maxi-desktop.png,
                       img/product-fish-maxi-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-fish-maxi-tablet.png   1x,
+                      img/product-fish-maxi-tablet.png,
                       img/product-fish-maxi-tablet@2.png 2x
-                    "
-                  />
+                    " />
                   <img
                     class="products__image products__image--fish-maxi"
                     src="img/product-fish-maxi.png 1x"
                     srcset="img/product-fish-maxi@2.png 2x"
                     width="84"
                     height="101"
-                    alt="большой зелёный стакан"
-                  />
-                </picture>
-              </a>
+                    alt="большой зелёный стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -255,36 +259,28 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />slim 500 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />slim 500 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-buckwheat-mini-desktop.png   1x,
+                      img/product-buckwheat-mini-desktop.png,
                       img/product-buckwheat-mini-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
-                    srcset="
-0
-                      img/product-buckwheat-mini-tablet.png   1x,
-                      img/product-buckwheat-mini-tablet@2.png 2x
-                    "
-                  />
+                    srcset="0
+                      img/product-buckwheat-mini-tablet.png, img/product-buckwheat-mini-tablet@2.png 2x" />
                   <img
                     class="products__image products__image--buckwheat-mini"
                     src="img/product-buckwheat-mini.png 1x"
                     srcset="img/product-buckwheat-mini@2.png 2x"
                     width="68"
                     height="78"
-                    alt="маленький синий стакан"
-                  />
-                </picture>
-              </a>
+                    alt="маленький синий стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -302,35 +298,30 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />slim 1000 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />slim 1000 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-buckwheat-maxi-desktop.png   1x,
+                      img/product-buckwheat-maxi-desktop.png,
                       img/product-buckwheat-maxi-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-buckwheat-maxi-tablet.png   1x,
+                      img/product-buckwheat-maxi-tablet.png,
                       img/product-buckwheat-maxi-tablet@2.png 2x
-                    "
-                  />
+                    " />
                   <img
                     class="products__image products__image--buckwheat-maxi"
                     src="img/product-buckwheat-maxi.png 1x"
                     srcset="img/product-buckwheat-maxi@2.png 2x"
                     width="84"
                     height="100"
-                    alt="большой синий стакан"
-                  />
-                </picture>
-              </a>
+                    alt="большой синий стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -348,35 +339,30 @@
               <a class="products__order" href="form.html">Заказать</a>
             </li>
             <li class="products__item">
-              <a class="products__link-name" href="#">
-                <h3 class="products__name">cat energy<br />slim 500 г</h3>
-              </a>
-              <a class="products__link-image" href="#">
-                <picture>
-                  <source
+              <a class="products__link-name" href="#"
+                ><h3 class="products__name">cat energy<br />slim 500 г</h3></a
+              ><a class="products__link-image" href="#"
+                ><picture
+                  ><source
                     media="(min-width: 1440px)"
                     srcset="
-                      img/product-rice-desktop.png   1x,
+                      img/product-rice-desktop.png,
                       img/product-rice-desktop@2.png 2x
-                    "
-                  />
+                    " />
                   <source
                     media="(min-width: 768px)"
                     srcset="
-                      img/product-rice-tablet.png   1x,
+                      img/product-rice-tablet.png,
                       img/product-rice-tablet@2.png 2x
-                    "
-                  />
+                    " />
                   <img
                     class="products__image products__image--rice"
                     src="img/product-rice.png 1x"
                     srcset="img/product-rice@2.png 2x"
                     width="72"
                     height="84"
-                    alt="маленький сиреневый стакан"
-                  />
-                </picture>
-              </a>
+                    alt="маленький сиреневый стакан" /></picture
+              ></a>
               <dl class="products__informations">
                 <div class="products__info-item">
                   <dt class="products__term">Масса</dt>
@@ -492,10 +478,23 @@
               приглашаем<br />к сотрудничеству<br />дилеров!
             </p>
             <p class="contacts__adress">ул. Большая<br />Конюшенная, д. 19/B</p>
-            <p class="contacts__adress contacts__adress--city">
+            <p class="contacts__adress contacts__adress-city">
               Санкт-Петербург
             </p>
           </div>
+        </div>
+        <div class="contacts__map-position">
+          <iframe
+            class="contacts__map contacts__map--online"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002922!2d30.320858715839222!3d59.93871916905448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1630161599929!5m2!1sru!2sru"
+            width="320"
+            height="362"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            aria-hidden="false"
+            title="Карта: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+          ></iframe>
         </div>
       </section>
     </main>
@@ -504,47 +503,54 @@
         <div class="page-footer__layout">
           <section class="page-footer__logo">
             <h4 class="visually-hidden">Логотип</h4>
-            <a class="page-footer__logo-text">
-              <img
+            <a class="page-footer__logo-text"
+              ><img
                 class="page-footer__logo-image-text"
                 src="img/logo-text.svg"
                 width="128"
                 height="24"
                 alt="cat energy"
-              />
-            </a>
+            /></a>
           </section>
           <section class="page-footer__footer-social footer-social">
             <div class="footer-social__layout">
               <h3 class="visually-hidden">социальные сети</h3>
               <ul class="footer-social__list">
                 <li class="footer-social__item">
-                  <a class="footer-social__link" href="#">
-                    <svg class="footer-social__icon" width="29px" height="17px">
+                  <a class="footer-social__link" href="#"
+                    ><svg
+                      class="footer-social__icon footer-social__icon--vk"
+                      width="29px"
+                      height="17px"
+                    >
                       <use xlink:href="img/sprite.svg#vk"></use>
                     </svg>
-                    <span class="visually-hidden">вконтакте</span>
-                  </a>
+                    <span class="visually-hidden">вконтакте</span></a
+                  >
                 </li>
                 <li class="footer-social__item footer-social__item--instagram">
-                  <a class="footer-social__link" href="#">
-                    <svg class="footer-social__icon" width="16px" height="16px">
+                  <a class="footer-social__link" href="#"
+                    ><svg
+                      class="footer-social__icon footer-social__icon--insta"
+                      width="16px"
+                      height="16px"
+                    >
                       <use xlink:href="img/sprite.svg#insta"></use>
                     </svg>
-                    <span class="visually-hidden">instagram</span>
-                  </a>
+                    <span class="visually-hidden">instagram</span></a
+                  >
                 </li>
                 <li class="footer-social__item">
-                  <a class="footer-social__link" href="#">
-                    <svg
+                  <a class="footer-social__link" href="#"
+                    ><svg
                       class="footer-social__icon footer-social__icon--fb"
                       width="22"
                       height="22"
                     >
                       <use xlink:href="img/sprite.svg#fb"></use>
                     </svg>
-                    <span class="visually-hidden">facebook</span>
-                  </a>
+                    <span class="visually-hidden">facebook</span></a
+                  >
                 </li>
               </ul>
             </div>
@@ -560,11 +566,9 @@
               <a
                 class="copyright__link-logo"
                 href="https://htmlacademy.ru/intensive/adaptive"
-              >
-                <svg class="copyright__logo" width="27" height="34">
-                  <use xlink:href="img/sprite.svg#academy"></use>
-                </svg>
-              </a>
+                ><svg class="copyright__logo" width="27" height="34">
+                  <use xlink:href="img/sprite.svg#academy"></use></svg
+              ></a>
             </div>
           </section>
         </div>

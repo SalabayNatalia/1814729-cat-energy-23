@@ -1,6 +1,7 @@
 .live-example {
   background-color: $light-grey;
-  padding-top: 27px;
+  padding-top: 28px;
+  padding-bottom: 36px;
 }
 
 .live-example__title {
@@ -11,7 +12,7 @@
 .live-example__text {
   font-family: "Arial", sans-serif;
   color: $grey-text;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   margin-top: 0;
 }
 
@@ -35,11 +36,11 @@
 }
 
 .live-example__number--kg {
-  padding: 14px 42px 18px;
+  padding: 14px 42px 16px;
 }
 
 .live-example__number--day {
-  padding: 15px 22px 18px;
+  padding: 15px 20px 16px;
 }
 
 .live-example__description {
@@ -52,55 +53,29 @@
   padding: 0 18px;
   background-color: $light-grey;
   text-align: center;
-  right: 16px;
   top: 47px;
+}
+
+.live-example__description--day {
+  right: 16px;
+}
+
+.live-example__description--kg {
+  right: 19px;
 }
 
 .live-example__expenses {
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 42px;
-}
-
-.live-example__button {
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  line-height: 20px;
-  color: $black;
-  text-transform: uppercase;
-  padding: 0;
-}
-
-.live-example__slider {
-  width: 198px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.live-example__range-controls {
-  width: 72px;
-  background-color: $white;
-  border-radius: 6px;
-  border: 1px solid $border-grey-dark;
-  padding: 3px 5px;
-}
-
-.live-example__bar {
-  width: 40%;
-  height: 6px;
-  background-color: $green;
-  border-radius: 6px;
+  margin-top: 25px;
+  margin-bottom: 48px;
 }
 
 .live-example__cat {
   position: relative;
   height: 232px;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
 
 .live-example__photo-before {
@@ -138,14 +113,52 @@
   right: 54px;
 }
 
+.live-example__button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.live-example__slider {
+  width: 198px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 44px;
+}
+
+.live-example__range-controls {
+  width: 83px;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $border-grey-dark;
+  padding: 3px 5px;
+}
+
+.live-example__bar {
+  width: 47%;
+  height: 6px;
+  background-color: $green;
+  border-radius: 6px;
+}
+
 @media (min-width: $tablet-size) {
   .live-example {
     background-image: linear-gradient(to bottom, $white 57%, $light-grey 57%);
+    background-color: $white;
+    padding-bottom: 44px;
   }
 
   .live-example__text {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 25px;
+    padding-right: 7px;
+    margin-bottom: 38px;
   }
 
   .live-example__title {
@@ -153,9 +166,17 @@
     line-height: 60px;
   }
 
+  .live-example__title--how {
+    margin-bottom: 72px;
+  }
+
+  .live-example__title--live {
+    margin-bottom: 62px;
+  }
+
   .live-example__layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 366px 1fr;
     grid-template-rows: min-content 1fr;
   }
 
@@ -173,7 +194,7 @@
   }
 
   .live-example__description--kg {
-    right: 22px;
+    right: 25px;
   }
 
   .live-example__description--day {
@@ -195,15 +216,16 @@
   .live-example__expenses {
     font-size: 20px;
     text-align: end;
-    line-height: 40px;
-    padding-left: 177px;
+    line-height: 31px;
+    padding-left: 149px;
     margin: 0;
+    margin-top: 19px;
   }
 
   .live-example__slider {
     position: relative;
-    top: -60px;
-    left: 70px;
+    top: -24px;
+    left: 69px;
     z-index: 3;
     width: 570px;
   }
@@ -222,7 +244,7 @@
     height: 32px;
     border-radius: 50%;
     position: absolute;
-    left: 48%;
+    left: 47%;
     top: -13px;
     box-shadow: inset 0 0 0 12px $white, inset 0 0 0 16px $green, 0 3px 8px -3px $black;
     cursor: pointer;
@@ -246,14 +268,14 @@
 
   .live-example__photo-before {
     left: 0;
-    top: -8px;
+    top: 63px;
     width: 354px;
     height: 520px;
   }
 
   .live-example__photo-after {
     right: 0;
-    top: 0;
+    top: 59px;
     width: 354px;
     height: 520px;
     display: block;

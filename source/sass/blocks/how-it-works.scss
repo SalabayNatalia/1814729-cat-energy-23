@@ -8,7 +8,7 @@
 
 .how-it-works__title {
   @include h2-style;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
 }
 
 .how-it-works__item {
@@ -20,53 +20,77 @@
   padding-left: 80px;
 }
 
-.how-it-works__item:not(:last-child) {
-  margin-bottom: 20px;
+.how-it-works__item--benefit,
+.how-it-works__item--convenience,
+.how-it-works__item--way {
+  margin-bottom: 27px;
 }
 
 .how-it-works__item--benefit::before {
   @include how-it-works-before;
-  background-image: url("../img/how-it-works-benefit.png");
+  background-image: url("../img/how-it-works-benefit.svg");
 }
 
 .how-it-works__item--convenience::before {
   @include how-it-works-before;
-  background-image: url("../img/how-it-works-convenience.png");
+  background-image: url("../img/how-it-works-convenience.svg");
 }
 
 .how-it-works__item--way::before {
   @include how-it-works-before;
-  background-image: url("../img/how-it-works-way.png");
+  background-image: url("../img/how-it-works-way.svg");
 }
 
 .how-it-works__item--result::before {
   @include how-it-works-before;
-  background-image: url("../img/how-it-works-result.png");
+  background-image: url("../img/how-it-works-result.svg");
 }
 
 @media (min-width: $tablet-size) {
   .how-it-works {
     border-bottom: 1px solid $border-grey;
-    margin-bottom: 45px;
+    margin-bottom: 27px;
+    padding-bottom: 93px;
   }
 
   .how-it-works__title {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  .how-it-works__title--how {
     margin-bottom: 72px;
+  }
+
+  .how-it-works__title--live {
+    margin-bottom: 62px;
   }
 
   .how-it-works__list {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
 
   .how-it-works__item--benefit {
-    position: relative;
+    padding-right: 109px;
+    margin-bottom: 133px;
   }
 
-  .how-it-works__item:not(:last-child) {
-    margin-bottom: 104px;
+  .how-it-works__item--convenience {
+    margin-left: 30px;
+    padding-right: 90px;
+    margin-bottom: 133px;
+  }
+
+  .how-it-works__item--way {
+    padding-right: 109px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__item--result {
+    margin-left: 30px;
+    padding-right: 70px;
+    margin-bottom: 0;
   }
 
   .how-it-works__item--benefit::after {
@@ -74,7 +98,7 @@
     content: "1";
     width: 112px;
     top: -40px;
-    right: 118px;
+    left: 118px;
   }
 
   .how-it-works__item--convenience::after {
@@ -82,7 +106,7 @@
     content: "2";
     width: 134px;
     top: -40px;
-    right: 118px;
+    left: 112px;
   }
 
   .how-it-works__item--way::after {
@@ -90,7 +114,7 @@
     content: "3";
     width: 134px;
     top: -40px;
-    right: 118px;
+    left: 118px;
   }
 
   .how-it-works__item--result::after {
@@ -98,35 +122,29 @@
     content: "4";
     width: 136px;
     top: -40px;
-    right: 107px;
+    left: 112px;
   }
 
   .how-it-works__item {
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
-    padding-right: 109px;
     padding-top: 110px;
-    margin-bottom: 104px;
 
     &--benefit::before {
       @include how-it-works-before-tablet;
-      background-image: url("../img/how-it-works-benefit-tablet.png");
     }
 
     &--convenience::before {
       @include how-it-works-before-tablet;
-      background-image: url("../img/how-it-works-convenience-tablet.png");
     }
 
     &--way::before {
       @include how-it-works-before-tablet;
-      background-image: url("../img/how-it-works-way-tablet.png");
     }
 
     &--result::before {
       @include how-it-works-before-tablet;
-      background-image: url("../img/how-it-works-result-tablet.png");
     }
   }
 }

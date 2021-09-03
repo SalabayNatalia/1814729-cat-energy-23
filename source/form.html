@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
-
   <body class="page-body-form">
     <header class="page-header">
       <div class="container">
         <div class="page-header__layout">
-          <a class="page-header__logo-picture">
-            <picture>
-              <source
+          <a href="index.html" class="page-header__logo-picture"
+            ><picture
+              ><source
                 media="(min-width: 1440px)"
-                srcset="img/logo-desktop.svg"
-              />
+                srcset="img/logo-desktop.svg" />
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
               <img
                 class="page-header__logo"
                 src="img/logo-mobile.svg"
                 height="38"
                 width="195"
-                alt="мордочка рыжего кота"
-              />
-            </picture>
-          </a>
-          <button
+                alt="мордочка рыжего кота" /></picture></a
+          ><button
             class="page-header__toggle page-header__toggle--closed"
             type="button"
           >
@@ -42,7 +41,7 @@
                   >главная</a
                 >
               </li>
-              <li class="main-navigation__item">
+              <li class="main-navigation__item main-navigation__item--catalog">
                 <a
                   class="main-navigation__link main-navigation__link--form"
                   href="catalog.html"
@@ -50,7 +49,11 @@
                 >
               </li>
               <li
-                class="main-navigation__item main-navigation__item--active-form"
+                class="
+                  main-navigation__item
+                  main-navigation__item--program
+                  main-navigation__item--active-form
+                "
               >
                 <a class="main-navigation__link main-navigation__link--form"
                   >подбор программы</a
@@ -74,9 +77,19 @@
             method="post"
           >
             <div class="program-questionnaire__layout">
-              <fieldset class="program-questionnaire__fieldset">
+              <fieldset
+                class="
+                  program-questionnaire__fieldset
+                  program-questionnaire__fieldset--name
+                "
+              >
                 <legend class="visually-hidden">Анкета</legend>
-                <p class="program-questionnaire__item">
+                <p
+                  class="
+                    program-questionnaire__item
+                    program-questionnaire__item--name
+                  "
+                >
                   <label
                     class="program-questionnaire__label-questionnaire"
                     for="questionnaireName"
@@ -92,7 +105,11 @@
                     id="questionnaireName"
                   />
                 </p>
-                <p class="program-questionnaire__item">
+                <p
+                  class="
+                    program-questionnaire__item program-questionnaire__item--kg
+                  "
+                >
                   <label
                     class="program-questionnaire__label-questionnaire"
                     for="questionnaireWeight"
@@ -132,49 +149,44 @@
                 "
               >
                 <legend class="visually-hidden">Цель</legend>
-                <div
-                  class="
-                    program-questionnaire__list-radio
-                    program-questionnaire__list-radio--inner
-                  "
-                >
+                <div class="program-questionnaire__list-radio-inner">
                   <ul class="program-questionnaire__list-radio">
                     <li class="program-questionnaire__item-radio">
-                      <label class="program-questionnaire__radio-name">
-                        <input
+                      <label class="program-questionnaire__radio-name"
+                        ><input
                           class="program-questionnaire__input-radio"
                           type="radio"
                           name="purpose"
                           value="slimming"
-                          checked
+                          checked="checked"
                         />
                         <span class="program-questionnaire__radio"></span
-                        >похудение
-                      </label>
+                        >похудение</label
+                      >
                     </li>
                     <li class="program-questionnaire__item-radio">
-                      <label class="program-questionnaire__radio-name">
-                        <input
+                      <label class="program-questionnaire__radio-name"
+                        ><input
                           class="program-questionnaire__input-radio"
                           type="radio"
                           name="purpose"
                           value="weight-gain"
                         />
                         <span class="program-questionnaire__radio"></span>набор
-                        массы
-                      </label>
+                        массы</label
+                      >
                     </li>
                     <li class="program-questionnaire__item-radio">
-                      <label class="program-questionnaire__radio-name">
-                        <input
+                      <label class="program-questionnaire__radio-name"
+                        ><input
                           class="program-questionnaire__input-radio"
                           type="radio"
                           name="purpose"
                           value="need-advice"
                         />
                         <span class="program-questionnaire__radio"></span>не
-                        знаю (нужен ваш совет)
-                      </label>
+                        знаю (нужен ваш совет)</label
+                      >
                     </li>
                   </ul>
                 </div>
@@ -317,12 +329,7 @@
                 Комментарий
               </legend>
               <label class="program-questionnaire__label" for="comment"></label>
-              <div
-                class="
-                  program-questionnaire__comment
-                  program-questionnaire__comment--inner
-                "
-              >
+              <div class="program-questionnaire__comment-inner">
                 <textarea
                   class="program-questionnaire__comment"
                   name="comment"
@@ -331,7 +338,12 @@
                 ></textarea>
               </div>
             </fieldset>
-            <fieldset class="program-questionnaire__fieldset">
+            <fieldset
+              class="
+                program-questionnaire__fieldset
+                program-questionnaire__fieldset--additionally
+              "
+            >
               <legend
                 class="
                   program-questionnaire__legend
@@ -346,79 +358,100 @@
                 "
               >
                 <li class="program-questionnaire__item-check">
-                  <label class="program-questionnaire__checkbox">
-                    <input
+                  <label class="program-questionnaire__checkbox"
+                    ><input
                       class="program-questionnaire__input-check"
                       type="checkbox"
                       name="sweetener"
-                      checked
+                      checked="checked"
                     />
                     <span class="program-questionnaire__check-box"></span
-                    >Сахарозаменитель
-                  </label>
+                    >Сахарозаменитель</label
+                  >
                 </li>
                 <li class="program-questionnaire__item-check">
-                  <label class="program-questionnaire__checkbox">
-                    <input
+                  <label
+                    class="
+                      program-questionnaire__checkbox
+                      program-questionnaire__checkbox--water
+                    "
+                    ><input
                       class="program-questionnaire__input-check"
                       type="checkbox"
                       name="water"
                     />
                     <span class="program-questionnaire__check-box"></span
-                    >Питьевая вода
-                  </label>
+                    >Питьевая вода</label
+                  >
                 </li>
                 <li class="program-questionnaire__item-check">
-                  <label class="program-questionnaire__checkbox">
-                    <input
+                  <label
+                    class="
+                      program-questionnaire__checkbox
+                      program-questionnaire__checkbox--milk
+                    "
+                    ><input
                       class="program-questionnaire__input-check"
                       type="checkbox"
                       name="milk"
                     />
-                    <span class="program-questionnaire__check-box"></span>Молоко
-                  </label>
+                    <span class="program-questionnaire__check-box"></span
+                    >Молоко</label
+                  >
                 </li>
                 <li class="program-questionnaire__item-check">
-                  <label class="program-questionnaire__checkbox">
-                    <input
+                  <label
+                    class="
+                      program-questionnaire__checkbox
+                      program-questionnaire__checkbox--vit
+                    "
+                    ><input
                       class="program-questionnaire__input-check"
                       type="checkbox"
                       name="vitamins"
                     />
                     <span class="program-questionnaire__check-box"></span
-                    >Витамины
-                  </label>
+                    >Витамины</label
+                  >
                 </li>
               </ul>
             </fieldset>
-            <div
-              class="
-                program-questionnaire__button
-                program-questionnaire__button--inner
-              "
-            >
-              <button class="program-questionnaire__button" type="submit">
-                Отправить заявку
-              </button>
+            <div class="program-questionnaire__wrap">
+              <div class="program-questionnaire__button-inner">
+                <button class="program-questionnaire__button" type="submit">
+                  Отправить заявку
+                </button>
+              </div>
+              <p class="program-questionnaire__important">
+                * — Обязательные поля
+              </p>
             </div>
-            <small class="program-questionnaire__important"
-              >* — Обязательные поля</small
-            >
           </form>
         </div>
       </section>
       <section class="page-main-form__contacts contacts">
         <div class="container">
-          <h3 class="visually-hidden">контакты</h3>
+          <h2 class="visually-hidden">контакты</h3>
           <div class="contacts__layout contacts__layout--form">
             <p class="contacts__title">
               приглашаем<br />к сотрудничеству<br />дилеров!
             </p>
             <p class="contacts__adress">ул. Большая<br />Конюшенная, д. 19/B</p>
-            <p class="contacts__adress contacts__adress--city">
-              Санкт-Петербург
-            </p>
+            <p class="contacts__adress-city">Санкт-Петербург</p>
           </div>
+        </div>
+        <div class="contacts__map-position">
+          <iframe
+            class="contacts__map contacts__map--online"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002922!2d30.320858715839222!3d59.93871916905448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1630161599929!5m2!1sru!2sru"
+            width="320"
+            height="362"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            aria-hidden="false"
+            title="Карта: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+          ></iframe>
         </div>
       </section>
     </main>
@@ -426,54 +459,61 @@
       <div class="container">
         <div class="page-footer__layout">
           <section class="page-footer__logo">
-            <h4 class="visually-hidden">Логотип</h4>
-            <a class="page-footer__logo-text">
-              <img
+            <h3 class="visually-hidden">Логотип</h4>
+            <a class="page-footer__logo-text"
+              ><img
                 class="page-footer__logo-image-text"
                 src="img/logo-text.svg"
                 width="128"
                 height="24"
                 alt="cat energy"
-              />
-            </a>
+            /></a>
           </section>
           <section class="page-footer__footer-social footer-social">
             <div class="footer-social__layout">
               <h3 class="visually-hidden">социальные сети</h3>
               <ul class="footer-social__list">
-                <li class="footer-social__item">
-                  <a class="footer-social__link" href="#">
-                    <svg class="footer-social__icon" width="29px" height="17px">
+                <li class="footer-social__item footer-social__item--vk">
+                  <a class="footer-social__link" href="#"
+                    ><svg
+                      class="footer-social__icon footer-social__icon--vk"
+                      width="29"
+                      height="17"
+                    >
                       <use xlink:href="img/sprite.svg#vk"></use>
                     </svg>
-                    <span class="visually-hidden">вконтакте</span>
-                  </a>
+                    <span class="visually-hidden">вконтакте</span></a
+                  >
                 </li>
                 <li class="footer-social__item footer-social__item--instagram">
-                  <a class="footer-social__link" href="#">
-                    <svg class="footer-social__icon" width="16px" height="16px">
+                  <a class="footer-social__link" href="#"
+                    ><svg
+                      class="footer-social__icon footer-social__icon--insta"
+                      width="16"
+                      height="16"
+                    >
                       <use xlink:href="img/sprite.svg#insta"></use>
                     </svg>
-                    <span class="visually-hidden">instagram</span>
-                  </a>
+                    <span class="visually-hidden">instagram</span></a
+                  >
                 </li>
                 <li class="footer-social__item">
-                  <a class="footer-social__link" href="#">
-                    <svg
+                  <a class="footer-social__link" href="#"
+                    ><svg
                       class="footer-social__icon footer-social__icon--fb"
                       width="22"
                       height="22"
                     >
                       <use xlink:href="img/sprite.svg#fb"></use>
                     </svg>
-                    <span class="visually-hidden">facebook</span>
-                  </a>
+                    <span class="visually-hidden">facebook</span></a
+                  >
                 </li>
               </ul>
             </div>
           </section>
           <section class="page-footer__copyright copyright">
-            <h3 class="visually-hidden">авторское право</h3>
+            <h2 class="visually-hidden">авторское право</h3>
             <div class="copyright__layout">
               <a
                 class="copyright__link-text"
@@ -483,11 +523,9 @@
               <a
                 class="copyright__link-logo"
                 href="https://htmlacademy.ru/intensive/adaptive"
-              >
-                <svg class="copyright__logo" width="27" height="34">
-                  <use xlink:href="img/sprite.svg#academy"></use>
-                </svg>
-              </a>
+                ><svg class="copyright__logo" width="27" height="34">
+                  <use xlink:href="img/sprite.svg#academy"></use></svg
+              ></a>
             </div>
           </section>
         </div>

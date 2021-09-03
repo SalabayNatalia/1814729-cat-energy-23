@@ -1,9 +1,10 @@
 .promo {
-  margin: 35px auto 0;
+  margin: 35px auto;
   position: relative;
 }
 
 .promo__text {
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: $white;
@@ -18,7 +19,7 @@
 
 .promo__icon {
   position: absolute;
-  top: 65px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
 }
