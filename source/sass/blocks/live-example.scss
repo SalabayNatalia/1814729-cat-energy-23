@@ -304,11 +304,16 @@
   .live-example__desktop-grid {
     display: grid;
     grid-template-columns: 36% 64%;
-    grid-template-rows: min-content min-content 1fr;
+    grid-template-rows: min-content min-content min-content;
   }
 
   .live-example {
-    background-image: linear-gradient(to right, $grey-grey 71.8%, $light-grey 28.2%);
+    background-image: linear-gradient(to right, $grey-grey 72.5%, $light-grey 27.5%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 1440px calc(100% - 206px), 100% calc(100% - 206px);
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .live-example__title {
@@ -326,15 +331,14 @@
   .live-example__layout {
     grid-row: 3 / -1;
     grid-column: 1 / 2;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-template-columns: 1fr;
-    row-gap: 55px;
   }
 
   .live-example__list {
     grid-row: 1 / 2;
     justify-self: start;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .live-example__item--kg {
@@ -343,6 +347,23 @@
 
   .live-example__description {
     background-color: $grey-grey;
+    top: 70px;
+  }
+
+  .live-example__description--kg {
+    right: 29px;
+  }
+
+  .live-example__number {
+    margin-bottom: 0;
+  }
+
+  .live-example__number--day {
+    padding: 20px 30px;
+  }
+
+  .live-example__number--kg {
+    padding: 20px 57px;
   }
 
   .live-example__expenses {
@@ -351,6 +372,12 @@
     justify-self: start;
     line-height: 20px;
     padding-left: 0;
+    margin-top: 58px;
+    margin-bottom: 0;
+  }
+
+  .live-example__expenses span{
+    margin-left: 60px;
   }
 
   .live-example__slider-wrap {
@@ -358,7 +385,6 @@
     grid-column: 2 / -1;
     align-self: end;
     justify-self: end;
-    padding-bottom: 75px;
   }
 
   .live-example__photo-before img {
@@ -367,14 +393,16 @@
 
   .live-example__photo-after img {
     right: 26px;
+    top: 18px;
   }
 
   .live-example__cat {
-    right: -65px;
+    right: -70px;
+    top: -112px;
   }
 
   .live-example__slider {
-    top: -48;
-    left: 127px;
+    top: -118px;
+    left: 138px;
   }
 }

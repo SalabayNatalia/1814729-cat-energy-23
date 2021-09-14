@@ -41,6 +41,7 @@
     background-image: url("../img/promo-tablet.jpg");
     width: 707px;
     height: 200px;
+    background-size: 707px 200px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo-tablet@2x.jpg");

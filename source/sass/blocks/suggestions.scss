@@ -46,13 +46,17 @@
   @media (min-width: $tablet-size) {
     padding: 77px 47px 55px 52px;
   }
+
+  @media (min-width: $desktop-size) {
+    padding-top: 81px;
+  }
 }
 
 .suggestions__item--stay {
   padding: 23px 32px 21px 20px;
 
   @media (min-width: $tablet-size) {
-    padding: 76px 30px 27px 52px;
+    padding: 81px 30px 27px 52px;
   }
 }
 
@@ -81,6 +85,8 @@
   @media (min-width: $desktop-size) {
     width: 100px;
     height: 106px;
+    margin-top: -38px;
+    margin-right: 61px;
   }
 }
 
@@ -99,6 +105,9 @@
   @media (min-width: $desktop-size) {
     width: 134px;
     height: 100px;
+    margin-left: -18px;
+    margin-top: -33px;
+    margin-right: 46px;
   }
 }
 
@@ -154,12 +163,21 @@
     padding-right: 60px;
     margin-top: 22px;
   }
+
+  @media (min-width: $desktop-size) {
+    padding-right: 0;
+    margin-top: 42px;
+  }
 }
 
 .suggestions__text--stay {
   @media (min-width: $tablet-size) {
     padding-right: 15px;
     margin-top: 24px;
+  }
+
+  @media (min-width: $desktop-size) {
+    margin-top: 42px;
   }
 }
 
@@ -181,6 +199,10 @@
   @media (min-width: $tablet-size) {
     bottom: 4px;
   }
+
+  @media (min-width: $desktop-size) {
+    margin-top: 30px;
+  }
 }
 
 .suggestions__link--stay {
@@ -193,8 +215,8 @@
   content: "";
   width: 32px;
   height: 10px;
-  top: 4px;
-  left: 108px;
+  top: 3px;
+  left: 100px;
   position: absolute;
   background-image: url("../img/row.svg");
 
@@ -202,6 +224,11 @@
     margin-left: 25px;
     left: 105px;
     top: 8px;
+  }
+
+  @media (min-width: $desktop-size) {
+    margin-left: 0;
+    left: 130px;
   }
 }
 

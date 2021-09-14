@@ -21,6 +21,7 @@
   margin-top: 0;
   margin-bottom: 14px;
   align-self: start;
+  padding-right: 50px;
 }
 
 .products__link-image {
@@ -177,6 +178,10 @@
   .products__name {
     font-size: 20px;
     line-height: 24px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    margin-top: 51px;
   }
 
   .products__info-item {

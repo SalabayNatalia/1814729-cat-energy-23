@@ -28,6 +28,12 @@
   .promo {
     margin: 69px 0 76px;
   }
+
+  .promo__text {
+    width: 230px;
+    text-align: left;
+    padding-right: 40px;
+  }
 }
 
 @media (min-width: $desktop-size) {
