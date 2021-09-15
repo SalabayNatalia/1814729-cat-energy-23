@@ -304,20 +304,21 @@
   .live-example__desktop-grid {
     display: grid;
     grid-template-columns: 36% 64%;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-rows: min-content 160px min-content;
   }
 
   .live-example {
     background-image: linear-gradient(to right, $grey-grey 72.5%, $light-grey 27.5%);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 1440px calc(100% - 206px), 100% calc(100% - 206px);
+    background-size: 1440px calc(100% - 135px), 100% calc(100% - 135px);
     padding-top: 0;
     padding-bottom: 0;
+    max-height: 595px;
   }
 
   .live-example__title {
-    margin-bottom: 146px;
+    margin-bottom: 22px;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
   }
@@ -376,7 +377,7 @@
     margin-bottom: 0;
   }
 
-  .live-example__expenses span{
+  .live-example__expenses span {
     margin-left: 60px;
   }
 

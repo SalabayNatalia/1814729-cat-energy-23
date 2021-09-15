@@ -64,7 +64,7 @@
 .program-questionnaire__legend {
   @include program-questionnaire-legend;
   margin-bottom: 15px;
-  padding: 28px 14px 20px 0;
+  padding: 28px 20px 20px 0;
   position: relative;
   background-color: $white;
   max-width: 201px;
@@ -269,7 +269,7 @@
 .program-questionnaire__button {
   @include button-green-style;
   width: 100%;
-  padding: 12px 0;
+  padding: 11px 0;
   font-size: 16px;
   line-height: 18px;
 }
@@ -370,7 +370,7 @@
   }
 
   .program-questionnaire__item {
-    padding: 0 40px;
+    padding: 0 38px 0 40px;
     margin-top: 0;
   }
 
@@ -421,7 +421,7 @@
 
   .program-questionnaire__list-radio {
     border: 1px solid $border-grey;
-    padding: 29px 0 27px 28px;
+    padding: 29px 0 27px 30px;
   }
 
   .program-questionnaire__item-radio:not(:last-child) {
@@ -457,11 +457,17 @@
   }
 
   .program-questionnaire__input--phone {
-    padding: 8px 0 13px 23px;
+    padding: 8px 0 13px 25px;
   }
 
   .program-questionnaire__item--email {
     margin-bottom: 20px;
+    padding-right: 36px;
+  }
+
+  .program-questionnaire__item--phone {
+    padding-right: 36px;
+    padding-left: 38px;
   }
 
   .program-questionnaire__comment {
@@ -507,6 +513,11 @@
     padding-left: 59px;
   }
 
+  .program-questionnaire__checkbox--water,
+  .program-questionnaire__checkbox--vit {
+    padding-left: 89px;
+  }
+
   .program-questionnaire__check-box {
     width: 39px;
     height: 39px;
@@ -538,11 +549,11 @@
     font-size: 16px;
     margin-top: 0;
     align-self: center;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .program-questionnaire__list-radio-inner {
-    padding: 0 40px;
+    padding: 0 38px;
   }
 
   .program-questionnaire__fieldset--additionally {
@@ -555,8 +566,13 @@
     padding-bottom: 82px;
   }
 
+  .program-questionnaire__fieldset--name {
+    margin-bottom: 30px;
+  }
+
   .program-questionnaire__legend {
-    padding: 20px 0;
+    padding: 20px 40px;
+    margin-left: -40px;
   }
 
   .program-questionnaire__legend::after {
@@ -615,11 +631,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    align-items: center;
   }
 
   .program-questionnaire__list-radio {
     margin-bottom: 22px;
+    padding-left: 28px;
   }
 
   .program-questionnaire__item {
@@ -663,15 +679,15 @@
   }
 
   .program-questionnaire__checkbox--water {
-    margin-left: 5px;
+    margin-left: -10px;
   }
 
   .program-questionnaire__checkbox--milk {
-    margin-left: 9px;
+    margin-left: 41px;
   }
 
   .program-questionnaire__checkbox--vit {
-    margin-left: 16px;
+    margin-left: 29px;
   }
 
   .program-questionnaire__fieldset--additionally {

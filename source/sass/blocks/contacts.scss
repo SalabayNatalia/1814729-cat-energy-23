@@ -54,12 +54,16 @@
 }
 
 @media (min-width: $tablet-size) {
-  .contacts__layout--form {
-    padding: 27px 40px 59px 40px;
-  }
-
   .contacts__layout {
     padding: 30px 40px 59px 40px;
+  }
+
+  .contacts__layout--form {
+    padding: 27px 41px 59px;
+  }
+
+  .contacts__layout--catalog {
+    padding: 27px 41px 59px;
   }
 
   .contacts__title {

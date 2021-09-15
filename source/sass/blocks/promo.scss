@@ -12,9 +12,10 @@
   margin-top: 0;
   margin-bottom: 0;
   position: absolute;
-  bottom: 43px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  width: 162px;
 }
 
 .promo__icon {
@@ -29,10 +30,17 @@
     margin: 69px 0 76px;
   }
 
+  .promo__icon {
+    left: 79px;
+    top: 57px;
+    transform: none;
+  }
+
   .promo__text {
-    width: 230px;
     text-align: left;
-    padding-right: 40px;
+    left: 423px;
+    top: 70px;
+    transform: none;
   }
 }
 
@@ -40,5 +48,16 @@
   .promo {
     margin: 0;
     align-self: start;
+  }
+
+  .promo__icon,
+  .promo__text {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .promo__text {
+    text-align: center;
+    top: 187px;
   }
 }
