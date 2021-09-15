@@ -8,19 +8,24 @@
   margin-top: 0;
   margin-bottom: 19px;
   padding-top: 27px;
-  padding-bottom: 41px;
+  padding-bottom: 40px;
   border-top: 1px solid $grey-border-catalog;
   border-bottom: 1px solid $grey-border-catalog;
   font-weight: 400;
 }
 
 .page-main-catalog__promo {
-  background-image: url("../img/promo.svg");
+  background-image: url("../img/promo.jpg");
   background-repeat: no-repeat;
   background-color: $green;
   background-position: center;
   width: 280px;
   height: 289px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo@2x.jpg");
+    background-size: 280px 289px;
+  }
 }
 
 @media (min-width: $tablet-size) {
@@ -28,12 +33,19 @@
     font-size: 60px;
     line-height: 60px;
     border: none;
-    padding-top: 0;
+    padding-top: 7px;
+    margin-bottom: 25px;
   }
 
   .page-main-catalog__promo {
+    background-image: url("../img/promo-tablet.jpg");
     width: 707px;
     height: 200px;
+    background-size: 707px 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet@2x.jpg");
+    }
   }
 }
 
@@ -41,5 +53,16 @@
   .page-main-catalog__promo {
     width: 245px;
     height: 289px;
+    background-image: url("../img/promo-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 245px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/promo-desktop@2x.jpg");
+    }
+  }
+
+  .page-main-catalog__title-catalog {
+    padding-top: 19px;
   }
 }

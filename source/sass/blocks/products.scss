@@ -2,7 +2,7 @@
   border-bottom: 1px solid $grey-border-catalog;
   padding: 0 20px;
   margin: 0 -20px;
-  padding-bottom: 19px;
+  padding-bottom: 23px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: min-content 1fr min-content;
@@ -21,13 +21,22 @@
   margin-top: 0;
   margin-bottom: 14px;
   align-self: start;
+  padding-right: 50px;
 }
 
 .products__link-image {
-  grid-row: 1 / -1;
+  grid-row: 1 / 3;
   grid-column: 1 / 2;
   align-self: end;
   justify-self: center;
+}
+
+.products__image {
+  text-align: end;
+}
+
+.products__image--fish-maxi {
+  top: 10px;
 }
 
 .products__informations {
@@ -55,7 +64,9 @@
   width: 100%;
   padding: 10px 0;
   grid-column: 1 / -1;
-  margin-top: 17px;
+  margin-top: 23px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .products__order:hover,
@@ -72,6 +83,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 27px;
 }
 
 .products__title-products-offer {
@@ -79,7 +91,7 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-top: 19px;
+  margin-top: 24px;
   margin-bottom: 0;
 }
 
@@ -88,9 +100,13 @@
   font-size: 12px;
   line-height: 16px;
   color: $grey-text;
+  margin-top: 8px;
+  margin-bottom: 21px;
 }
 
 .products__button-show-all {
+  font-size: 16px;
+  line-height: 20px;
   background-color: $grey-grey;
   color: $grey-text;
   text-transform: uppercase;
@@ -100,7 +116,7 @@
   vertical-align: middle;
   padding: 10px 0;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 @media (min-width: $tablet-size) {
@@ -108,29 +124,69 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 94px;
+    row-gap: 47px;
   }
 
   .products__item {
     display: grid;
     grid-template-columns: 100%;
-    justify-items: center;
-    padding: 0 38px 39px;
+    padding: 25px 38px 39px;
     border-bottom: none;
+    max-width: 324px;
   }
 
   .products__item:not(:last-child) {
-    margin-bottom: 0;
-    background-image: linear-gradient(to bottom, $white 21%, $grey-grey 21%);
+    margin: 0;
+    background-image: linear-gradient(to bottom, $white 19%, $grey-grey 19%);
+  }
+
+  .products__image--chicken-mini {
+    width: 161px;
+    height: 206px;
+  }
+
+  .products__image--chicken-maxi {
+    width: 168px;
+    height: 206px;
+  }
+
+  .products__image--fish-mini {
+    width: 163px;
+    height: 174px;
+  }
+
+  .products__image--fish-maxi {
+    width: 168px;
+    height: 200px;
+  }
+
+  .products__image--buckwheat-mini {
+    width: 161px;
+    height: 171px;
+  }
+
+  .products__image--buckwheat-maxi {
+    width: 168px;
+    height: 200px;
+  }
+
+  .products__image--rice {
+    width: 163px;
+    height: 174px;
   }
 
   .products__name {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 25px;
+    padding-right: 50px;
+    padding-left: 54px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 19px;
   }
 
   .products__info-item {
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     border-bottom: 1px solid $border-grey-dark;
     margin-bottom: 7px;
   }
@@ -138,6 +194,11 @@
   .products__term,
   .products__description {
     font-size: 16px;
+  }
+
+  .products__order {
+    width: 248px;
+    margin-top: 26px;
   }
 
   .products__title-products-offer {
@@ -162,10 +223,13 @@
   }
 
   .products__plus {
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 52px 37px 38px 38px;
+    padding: 50px 37px 37px 38px;
     border: 2px solid $grey-grey;
+    margin-top: 97px;
+    margin-left: 0;
   }
 
   .products__decor {
@@ -182,7 +246,66 @@
   .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 80px;
-    row-gap: 92px;
+    column-gap: 76px;
+    row-gap: 47px;
+  }
+
+  .products__item {
+    padding-top: 18px;
+    max-width: 246px;
+    padding-right: 34px;
+    padding-left: 41px;
+  }
+
+  .products__name {
+    padding-right: 14px;
+    padding-left: 19px;
+    margin-top: 41px;
+    margin-bottom: 23px;
+    line-height: 23px;
+  }
+
+  .products__image--chicken-mini {
+    height: 167px;
+  }
+
+  .products__image--chicken-maxi {
+    width: 172px;
+    height: 202px;
+  }
+
+  .products__image--fish-maxi {
+    width: 172px;
+    height: 196px;
+  }
+
+  .products__image--buckwheat-maxi {
+    width: 172px;
+    height: 196px;
+  }
+
+  .products__order {
+    width: 170px;
+  }
+
+  .products__plus {
+    margin-top: 98px;
+    margin-left: 1px;
+    padding-bottom: 37px;
+  }
+
+  .products__decor {
+    margin-top: 30px;
+  }
+
+  .products__title-products-offer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px;
+  }
+
+  .products__text-products-offer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

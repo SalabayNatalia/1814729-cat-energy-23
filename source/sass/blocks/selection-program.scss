@@ -6,35 +6,46 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0;
+  border-top: 1px solid $grey;
+  padding: 27px 20px 0 20px;
+  margin: 0 -20px;
 }
 
 .selection-program__text {
   text-transform: uppercase;
-  margin-top: 38px;
-  margin-bottom: 38px;
+  margin-top: 37px;
+  margin-bottom: 25px;
   padding-right: 30px;
 }
 
 @media (min-width: $tablet-size) {
   .selection-program__title {
-    padding: 0 40px;
+    padding: 0 60px;
     font-size: 60px;
     line-height: 60px;
+    border-top: none;
+    margin-top: 8px;
   }
 
   .selection-program__text {
-    padding: 0 40px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 289px 0 40px;
+    margin: 54px 0 66px 0;
   }
 }
 
 @media (min-width: $desktop-size) {
   .selection-program__title {
     padding: 0;
+    margin-left: 0;
+    margin-top: 20px;
   }
 
   .selection-program__text {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 840px;
+    line-height: 31px;
+    margin-bottom: 66px;
   }
 }

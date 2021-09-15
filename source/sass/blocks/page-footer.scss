@@ -7,12 +7,11 @@
 
 .page-footer__logo {
   text-align: center;
-  background-color: $grey-grey;
 }
 
 .page-footer__logo-image-text {
   margin-top: 39px;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .page-footer__logo-text:hover,
@@ -25,9 +24,20 @@
 }
 
 @media (min-width: $tablet-size) {
+  .page-footer {
+    padding-bottom: 35px;
+  }
+
   .page-footer__layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .page-footer__layout {
+    padding-top: 26px;
   }
 }

@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../img/background-cat.png");
+  background-image: url("../img/background-mobile.png");
   background-repeat: no-repeat;
   background-position: top;
 }
@@ -16,12 +16,14 @@
   text-align: center;
   color: $white;
   margin-top: 27px;
-  margin-bottom: 25px;
+  margin-bottom: 11px;
   font-weight: 400;
 }
 
 .hero__slogan {
   color: $white;
+  font-size: 14px;
+  text-transform: uppercase;
   line-height: 14px;
   text-align: center;
   margin-bottom: 29px;
@@ -34,7 +36,7 @@
 .hero__button {
   @include button-green-style;
   width: 100%;
-  padding: 7px 0;
+  padding: 11px 0;
   margin-bottom: 22px;
 }
 
@@ -54,9 +56,10 @@
   }
 
   .hero__layout {
-    padding-left: 91px;
-    padding-bottom: 500px;
+    padding-left: 88px;
+    padding-bottom: 600px;
     justify-items: start;
+    position: relative;
   }
 
   .hero__title {
@@ -66,6 +69,8 @@
     color: $black;
     text-align: start;
     padding-right: 185px;
+    margin-top: 7px;
+    margin-bottom: 22px;
   }
 
   .hero__slogan {
@@ -74,16 +79,29 @@
     line-height: 20px;
   }
 
+  .hero__image {
+    width: 709px;
+    height: 608px;
+    position: absolute;
+    top: 209px;
+    left: 0;
+  }
+
   .hero__button {
-    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 26px;
     width: 244px;
+    position: absolute;
+    top: 239px;
+    left: 91px;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-size) {
   .hero {
-    padding-bottom: 300px;
-    margin-bottom: 80px;
+    padding-bottom: 340px;
     position: relative;
   }
 
@@ -93,28 +111,38 @@
     background-repeat: no-repeat;
     position: absolute;
     display: block;
-    top: -130px;
+    top: -171px;
     right: 0;
     z-index: -1;
     width: 720px;
     height: 694px;
   }
 
+  .hero__layout {
+    padding-bottom: 0;
+    padding-left: 80px;
+  }
+
   .hero__title {
-    padding-right: 560px;
+    padding-right: 564px;
+    margin-top: 55px;
+  }
+
+  .hero__image {
+    width: 552px;
+    height: 499px;
+    top: -29px;
+    left: 449px;
   }
 
   .hero__button {
     margin-bottom: 0;
-  }
-}
-
-@media (min-width: $tablet-size) {
-  .hero__layout {
-    padding-bottom: 0;
+    padding-top: 16px;
+    top: 289px;
+    left: 80px;
   }
 
-  .hero {
-    padding-bottom: 82px;
+  .hero__slogan {
+    line-height: 19px;
   }
 }
